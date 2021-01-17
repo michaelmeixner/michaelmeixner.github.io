@@ -1,25 +1,29 @@
-'use strict';
+import React from 'react';
+import { GitHub, LinkedIn, Instagram } from '@material-ui/icons';
 
-const e = React.createElement;
-
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
-
-  render() {
-    if (this.state.liked) {
-      return 'You liked this.';
-    }
-
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
+const gitHubIcon = () => {
+    return (
+        <div>
+            <GitHub></GitHub>
+        </div>
     );
-  }
 }
+export default gitHubIcon;
 
-const domContainer = document.querySelector('#react_icons');
-ReactDOM.render(e(LikeButton), domContainer);
+const linkedInIcon = () => {
+    return (
+        <div>
+            <LinkedIn></LinkedIn>
+        </div>
+    );
+}
+export default linkedInIcon;
+
+const instagramIcon = () => {
+    return (
+        <div>
+            <Instagram></Instagram>
+        </div>
+    );
+}
+export default instagramIcon;
