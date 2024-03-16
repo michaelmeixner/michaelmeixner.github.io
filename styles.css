@@ -17,6 +17,8 @@ header {
   position: relative;
   height: 5vh; /* or your preferred height */
   border-bottom: 1px solid #333;
+  width: 95%;
+  margin: auto;
   /* background-color: #733e32; */
 }
 
@@ -38,7 +40,6 @@ nav div.right-links {
 nav a {
   text-decoration: none;
   color: #333;
-  margin-right: 15px; /* Space between links */
   transition: color 0.3s ease-in-out;
 }
 
@@ -53,7 +54,7 @@ nav div.left-links {
 
 nav div.right-links {
   right: 0;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 /* Adjusted for Playfair Display font styling */
