@@ -5,33 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DesignSphereDigest</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>DesignSphereDigest</h1>
+        <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <!-- Add more links as needed -->
-            </ul>
+            <div class="left-links">
+                <a href="studies.html">Studies</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
         </nav>
+        <h1 class="playfair-display-h1">Exploring Design</h1>
+        <nav>
+            <div class="right-links">
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </nav>
+        <div id="hamburger" onclick="toggleMenu()">☰</div>
+        <div id="fullscreenMenu" class="fullscreen-menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
+            <a href="studies.html">Studies</a>
+            <a href="contact.html">Contact Me</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+        <script src="script.js"></script>
     </header>
     
     <main>
-        <section class="featured-article">
+        <!-- <section class="featured-article">
             <h2>Featured Article Title</h2>
             <img src="path/to/featured-image.jpg" alt="Featured Article">
             <p>This is a summary of the featured article.</p>
             <a href="article.html">Read more</a>
-        </section>
+        </section> -->
         <!-- Add more sections for different categories or latest posts -->
     </main>
     
-    <footer>
-        <p>&copy; 2024 DesignSphereDigest</p>
-    </footer>
+    <!-- <footer>
+                <p>&copy; 2024 Michael Meixner</p>
+    </footer> -->
 
-    <script src="script.js"></script>
 </body>
 </html>
