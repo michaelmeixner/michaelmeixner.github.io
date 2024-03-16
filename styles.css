@@ -137,39 +137,79 @@ footer {
   font-size: 2.5vw;
 }
 
+#fullscreenMenu a {
+  display: block; /* Makes each link fill the width of the menu, easier to tap on mobile */
+  color: #333; /* Example link color, change as needed */
+  padding: 30px 0; /* Adds padding above and below each link for spacing */
+  text-align: center; /* Centers the link text within the menu */
+  text-decoration: none; /* Removes the underline from links */
+  font-size: 1.5rem; /* Adjusts the size of the link text, change as needed */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#fullscreenMenu a:hover,
+#fullscreenMenu a:focus {
+  /* background-color: #f2a679; */
+  color: #733e32; /* Changes text color on hover for contrast, optional */
+}
+
+#fullscreenMenu .closebtn {
+    position: absolute;
+    top: 15px; /* Adjusts the position from the top */
+    right: 10%; /* Adjusts the position from the right */
+    font-size: 3rem; /* Makes the close button larger */
+    color: #333; /* Example color, change as needed */
+}
+
+#fullscreenMenu a:not(.closebtn) {
+    padding: 60px 0; /* Increases padding above and below each link */
+    margin: 10px 0; /* Optional: Adds more space between links */
+    display: block; /* Ensures each link takes up the full width for its vertical space */
+    line-height: 1.5; /* Adjusts line height for better readability and spacing */
+    font-size: 1.5rem; /* Adjusts font size for better visibility, adjust as needed */
+    text-align: center; /* Centers the link text */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s ease; /* Smooth transition for color change on hover */
+}
+
+
 @media (max-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    /* align-items: baseline; */
-    padding: 20px;
-    /* background-color: #733e32; */
-    flex-direction: row;
-    width: 100%;
-  }
-
-  header h1 {
-    font-size: 7vw; /* Adjusts the font size for smaller screens */
-    /* justify-self: left; */
-    text-align: center; /* Ensures the text is aligned to the left */
-    /* background-color: #f5e9dc; */
-    margin-right: 30%;
-    /* margin-bottom: 10px; */
-    order: 0;
-  }
-
-  #hamburger {
-    display: block; /* Shows the hamburger icon */
-    position: relative; /* Adjusted for positioning within the flex container */
-    cursor: pointer; /* Optional: Changes the cursor to a pointer on hover */
-    font-size: 30px; /* Adjusts size of the hamburger icon */
-    text-align: right; /* Aligns the hamburger icon to the right */
-    margin-right: 10%;
-    /* margin-bottom: 10px; */
-  }
-
-  header .left-links,
-  header .right-links {
-    display: none; /* Hide traditional links */
-  }
+    header {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: baseline; */
+        padding: 20px;
+        /* background-color: #733e32; */
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    header h1 {
+        font-size: 7vw; /* Adjusts the font size for smaller screens */
+        /* justify-self: left; */
+        text-align: center; /* Ensures the text is aligned to the left */
+        /* background-color: #f5e9dc; */
+        margin-right: 30%;
+        /* margin-bottom: 10px; */
+        order: 0;
+    }
+    
+    #hamburger {
+        display: block; /* Shows the hamburger icon */
+        position: relative; /* Adjusted for positioning within the flex container */
+        cursor: pointer; /* Optional: Changes the cursor to a pointer on hover */
+        font-size: 30px; /* Adjusts size of the hamburger icon */
+        text-align: right; /* Aligns the hamburger icon to the right */
+        margin-right: 10%;
+        margin-bottom: 10px;
+    }
+    
+    #hamburger:hover {
+        color: #733e32; /* Changes text color on hover for contrast, optional */
+    }
+    
+    header .left-links,
+    header .right-links {
+        display: none; /* Hide traditional links */
+    }
 }
