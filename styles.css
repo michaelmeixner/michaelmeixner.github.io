@@ -16,6 +16,7 @@ header {
   padding: 20px;
   position: relative;
   height: 5vh; /* or your preferred height */
+  border-bottom: 1px solid #333;
   /* background-color: #733e32; */
 }
 
