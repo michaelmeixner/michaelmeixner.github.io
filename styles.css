@@ -1,66 +1,48 @@
+/* General Reset and Body Styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5e9dc;
+}
+
+/* Header Styles */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps the title centered; might adjust for nav links */
   padding: 20px;
   position: relative;
+  height: 5vh; /* or your preferred height */
   /* background-color: #733e32; */
 }
 
-#hamburger {
-  display: none; /* Hide by default */
-  font-size: 30px; /* Adjust size as needed */
-  cursor: pointer;
-}
-
-.fullscreen-menu {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #f5e9dc; /* Soft cream color */
-  z-index: 99;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.fullscreen-menu a {
-  font-size: 24px;
-  color: #333;
-  padding: 15px;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-
-.fullscreen-menu .closebtn {
+/* Assuming you introduce a .nav-container */
+.nav-container {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333; /* Or any color that fits your design */
-  background-color: #f5e9dc; /* Soft cream color */
-}
-
-header h1 {
-  margin-bottom: 0;
-  padding-bottom: 30px; /* Adjust based on your header's height */
+  bottom: 0; /* Aligns the container to the bottom */
+  width: 100%; /* Spans the full width of the header */
+  display: flex;
+  justify-content: space-between; /* Adjust based on your design */
+  padding: 0 20px; /* Adds some horizontal padding */
 }
 
 nav div.left-links,
 nav div.right-links {
-  position: absolute;
-  bottom: 0;
-  /* background-color: #733e32; */
+  display: flex; /* Ensures links are flex items; adjust as necessary */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 15px; /* Space between links */
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #733e32;
 }
 
 nav div.left-links {
@@ -70,146 +52,119 @@ nav div.left-links {
 
 nav div.right-links {
   right: 0;
+  padding-right: 20px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333; /* Original link color */
-  margin-right: 15px; /* Space between links */
-  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
-}
-
-nav a:hover {
-  color: #733e32; /* New color when hovered */
-}
-
-/* Featured Article */
-.featured-article {
-  background-color: #a60321; /* Bold accent color */
-  color: #d0eff2; /* Ensuring text is readable against the dark background */
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 800px;
-}
-
-.featured-article h2,
-.featured-article p {
-  margin-top: 20px;
-}
-
-.featured-article img {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
-
-/* Footer */
-footer {
-  background-color: #733e32; /* Accent color */
-  color: #d0eff2;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Fonts */
+/* Adjusted for Playfair Display font styling */
 .playfair-display-h1 {
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
+  font-size: 2.5rem; /* Adjusted for visibility within a smaller header */
   font-weight: 500;
-  font-style: normal;
-  font-size: 4vw;
+  margin: 0; /* Removes default margin */
+  color: #333; /* Ensures contrast against the header background */
 }
 
-.playfair-display-nav {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 70%;
+header a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 15px; /* Space between links */
+  transition: color 0.3s ease-in-out;
 }
 
-.segoe-ui-h2 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2.5vw;
+header a:hover {
+  color: #733e32;
 }
 
-#fullscreenMenu a {
-  display: block; /* Makes each link fill the width of the menu, easier to tap on mobile */
-  color: #333; /* Example link color, change as needed */
-  padding: 30px 0; /* Adds padding above and below each link for spacing */
-  text-align: center; /* Centers the link text within the menu */
-  text-decoration: none; /* Removes the underline from links */
-  font-size: 1.5rem; /* Adjusts the size of the link text, change as needed */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+/* Hamburger Menu Styles */
+#hamburger {
+  transition: color 0.3s ease-in-out;
 }
 
-#fullscreenMenu a:hover,
-#fullscreenMenu a:focus {
-  /* background-color: #f2a679; */
-  color: #733e32; /* Changes text color on hover for contrast, optional */
+#hamburger:hover {
+  color: #733e32;
 }
 
-#fullscreenMenu .closebtn {
-    position: absolute;
-    top: 15px; /* Adjusts the position from the top */
-    right: 10%; /* Adjusts the position from the right */
-    font-size: 3rem; /* Makes the close button larger */
-    color: #333; /* Example color, change as needed */
+#hamburger,
+.fullscreen-menu .closebtn {
+  position: absolute;
+  top: 20px; /* Adjust as necessary to position vertically */
+  right: 20px; /* Adjust as necessary to position horizontally */
+  font-size: 35px;
+  cursor: pointer;
+  display: none; /* Start with both hidden, display them conditionally */
+  /* background-color: #333; */
 }
 
-#fullscreenMenu a:not(.closebtn) {
-    padding: 60px 0; /* Increases padding above and below each link */
-    margin: 10px 0; /* Optional: Adds more space between links */
-    display: block; /* Ensures each link takes up the full width for its vertical space */
-    line-height: 1.5; /* Adjusts line height for better readability and spacing */
-    font-size: 1.5rem; /* Adjusts font size for better visibility, adjust as needed */
-    text-align: center; /* Centers the link text */
-    text-decoration: none; /* Removes underline from links */
-    transition: color 0.3s ease; /* Smooth transition for color change on hover */
+.fullscreen-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5e9dc;
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.fullscreen-menu a,
+.fullscreen-menu .closebtn {
+  font-size: 24px;
+  color: #333;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
 
+.fullscreen-menu a {
+  padding-top: 70px;
+  transition: color 0.3s ease-in-out;
+}
+
+.fullscreen-menu a:hover {
+  color: #733e32;
+}
+
+.fullscreen-menu .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 60px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        /* align-items: baseline; */
-        padding: 20px;
-        /* background-color: #733e32; */
-        flex-direction: row;
-        width: 100%;
-    }
-    
-    header h1 {
-        font-size: 7vw; /* Adjusts the font size for smaller screens */
-        /* justify-self: left; */
-        text-align: center; /* Ensures the text is aligned to the left */
-        /* background-color: #f5e9dc; */
-        margin-right: 30%;
-        /* margin-bottom: 10px; */
-        order: 0;
-    }
-    
-    #hamburger {
-        display: block; /* Shows the hamburger icon */
-        position: relative; /* Adjusted for positioning within the flex container */
-        cursor: pointer; /* Optional: Changes the cursor to a pointer on hover */
-        font-size: 30px; /* Adjusts size of the hamburger icon */
-        text-align: right; /* Aligns the hamburger icon to the right */
-        margin-right: 10%;
-        margin-bottom: 10px;
-    }
-    
-    #hamburger:hover {
-        color: #733e32; /* Changes text color on hover for contrast, optional */
-    }
-    
-    header .left-links,
-    header .right-links {
-        display: none; /* Hide traditional links */
-    }
+  header {
+    flex-direction: row; /* Changes the flex direction to row for a horizontal layout */
+    justify-content: space-between; /* Aligns children (h1 and nav-container) on opposite ends */
+    align-items: center; /* Centers items vertically within the header */
+    padding: 25px 20px; /* Adjust padding as necessary */
+  }
+
+  .playfair-display-h1 {
+    order: -1; /* Moves the h1 to the start (left side) of the flex container */
+    flex-grow: 1; /* Allows the h1 to grow and push the navigation to the end */
+    text-align: left; /* Aligns the h1 text to the left */
+    margin-right: auto; /* Ensures any following content is pushed to the right */
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  #hamburger {
+    display: block; /* Ensures the hamburger menu is visible */
+    position: absolute;
+    right: 20px; /* Positions the hamburger icon on the right */
+    top: 20px; /* Adjusts vertical position to align within the header */
+    cursor: pointer;
+  }
+
+  header .left-links,
+  header .right-links {
+    display: flex; /* Adjusts display if needed for your design */
+  }
 }
