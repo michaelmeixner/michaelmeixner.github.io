@@ -151,6 +151,7 @@ header a:hover {
     flex-grow: 1; /* Allows the h1 to grow and push the navigation to the end */
     text-align: left; /* Aligns the h1 text to the left */
     margin-right: auto; /* Ensures any following content is pushed to the right */
+    font-size: 30px;
   }
 
   .nav-container {
