@@ -1,173 +1,61 @@
-/* General Reset and Body Styles */
+/* Basic styling for the landing page */
 body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f5e9dc;
+    margin: 0;
+    font-family: 'Futura', sans-serif;
+    background-color: #fff;
 }
 
-/* Header Styles */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; /* Keeps the title centered; might adjust for nav links */
-  padding: 20px;
-  position: relative;
-  height: 5vh; /* or your preferred height */
-  border-bottom: 1px solid #333;
-  width: 95%;
-  margin: auto;
-  /* background-color: #733e32; */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
 }
 
-/* Assuming you introduce a .nav-container */
-.nav-container {
-  position: absolute;
-  bottom: 0; /* Aligns the container to the bottom */
-  width: 100%; /* Spans the full width of the header */
-  display: flex;
-  justify-content: space-between; /* Adjust based on your design */
-  padding: 0 20px; /* Adds some horizontal padding */
+header nav ul {
+    list-style: none;
 }
 
-nav div.left-links,
-nav div.right-links {
-  display: flex; /* Ensures links are flex items; adjust as necessary */
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease-in-out;
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
-nav a:hover {
-  color: #733e32;
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('foyer.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-nav div.left-links {
-  left: 0;
-  padding-left: 20px; /* Adjust spacing as needed */
+.hero-content h1 {
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
 }
 
-nav div.right-links {
-  right: 0;
-  padding-right: 10px;
+.hero-content p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #555;
 }
 
-/* Adjusted for Playfair Display font styling */
-.playfair-display-h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.5rem; /* Adjusted for visibility within a smaller header */
-  font-weight: 500;
-  margin: 0; /* Removes default margin */
-  color: #333; /* Ensures contrast against the header background */
-}
-
-header a {
-  text-decoration: none;
-  color: #333;
-  margin-right: 15px; /* Space between links */
-  transition: color 0.3s ease-in-out;
-}
-
-header a:hover {
-  color: #733e32;
-}
-
-/* Hamburger Menu Styles */
-#hamburger {
-  transition: color 0.3s ease-in-out;
-}
-
-#hamburger:hover {
-  color: #733e32;
-}
-
-#hamburger,
-.fullscreen-menu .closebtn {
-  position: absolute;
-  top: 20px; /* Adjust as necessary to position vertically */
-  right: 20px; /* Adjust as necessary to position horizontally */
-  font-size: 35px;
-  cursor: pointer;
-  display: none; /* Start with both hidden, display them conditionally */
-  /* background-color: #333; */
-}
-
-.fullscreen-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f5e9dc;
-  z-index: 99;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.fullscreen-menu a,
-.fullscreen-menu .closebtn {
-  font-size: 24px;
-  color: #333;
-  padding: 15px;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-
-.fullscreen-menu a {
-  padding-top: 70px;
-  transition: color 0.3s ease-in-out;
-}
-
-.fullscreen-menu a:hover {
-  color: #733e32;
-}
-
-.fullscreen-menu .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 60px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  header {
-    flex-direction: row; /* Changes the flex direction to row for a horizontal layout */
-    justify-content: space-between; /* Aligns children (h1 and nav-container) on opposite ends */
-    align-items: center; /* Centers items vertically within the header */
-    padding: 25px 20px; /* Adjust padding as necessary */
-  }
-
-  .playfair-display-h1 {
-    order: -1; /* Moves the h1 to the start (left side) of the flex container */
-    flex-grow: 1; /* Allows the h1 to grow and push the navigation to the end */
-    text-align: left; /* Aligns the h1 text to the left */
-    margin-right: auto; /* Ensures any following content is pushed to the right */
-    font-size: 30px;
-  }
-
-  .nav-container {
-    display: none;
-  }
-
-  #hamburger {
-    display: block; /* Ensures the hamburger menu is visible */
+.scroll-indicator {
     position: absolute;
-    right: 20px; /* Positions the hamburger icon on the right */
-    top: 20px; /* Adjusts vertical position to align within the header */
-    cursor: pointer;
-  }
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
 
-  header .left-links,
-  header .right-links {
-    display: flex; /* Adjusts display if needed for your design */
-  }
+.scroll-indicator span {
+    font-size: 1.2rem;
+    color: #333;
 }
