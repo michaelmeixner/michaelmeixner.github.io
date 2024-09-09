@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Meixner</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCHL</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#photography">Photography</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="site-title">
+        <h1>MCHL</h1>
+        <div class="diagonal-line"></div>
+      </div>
+      <div class="scroll-reveal-line"></div>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Space</h1>
-            <p>Software Developer & Photographer</p>
-        </div>
-        <div class="scroll-indicator">
-            <span>↓ Scroll Down</span>
-        </div>
+      <div class="hero-content">
+        <h2>Welcome to My Space</h2>
+        <p>Software Developer & Photographer</p>
+      </div>
+      <div class="scroll-indicator">
+        <span>↓ Scroll Down</span>
+      </div>
     </section>
 
-    <!-- More sections go here -->
+    <!-- Main Content -->
+    <section class="content">
+      <p>Scroll down to reveal the line...</p>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </section>
 
-</body>
+    <script src="script.js"></script>
+
+    <!-- Main Content Navigation Links as Section Elements -->
+    <section id="navigation-links">
+      <div class="links-wrapper">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#photography">Photography</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </section>
+
+    <!-- Other sections go here -->
+  </body>
 </html>
