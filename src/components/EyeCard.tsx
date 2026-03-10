@@ -14,7 +14,7 @@ function Eyes() {
 function Couch() {
   return (
     <div
-      className="bg-[var(--cookie-monster-blue)] flex items-end shrink-0 h-[143px] w-[800px] overflow-visible rounded-t-3xl rounded-bl-md rounded-br-md border-b-[5px] relative"
+      className="bg-[var(--cookie-monster-blue)] flex items-end shrink-0 h-[143px] w-[800px] overflow-visible rounded-t-3xl rounded-bl-md rounded-br-md border-b-[5px] border-[rgba(0,0,0,0.2)] relative"
       data-name="couch"
     >
       {/* Left armrest */}
@@ -61,7 +61,7 @@ function Couch() {
       ></div>
 
       {/* Divider */}
-      <div className="bg-[var(--metal-color)] absolute shrink-0 h-[6px] w-[784px] border-2 border-b-0 z-11 bottom-[-10px] left-1/2 -translate-x-1/2"></div>
+      <div className="bg-[var(--metal-color)] absolute shrink-0 h-[6px] w-[784px] border-2 border-b-0 border-[rgba(0,0,0,0.2)] z-11 bottom-[-10px] left-1/2 -translate-x-1/2"></div>
 
       {/* Legs - alternating blue rectangles and metal squares */}
       <div className="absolute bottom-[-60px] left-1/2 -translate-x-1/2 flex gap-0">
@@ -79,7 +79,7 @@ function Couch() {
       </div>
 
       {/* Divider */}
-      <div className="bg-[var(--metal-color)] absolute shrink-0 h-[6px] w-[784px] border-2 border-b-0 z-11 bottom-[-65px] left-1/2 -translate-x-1/2"></div>
+      <div className="bg-[var(--metal-color)] absolute shrink-0 h-[6px] w-[784px] border-2 border-b-0 border-[rgba(0,0,0,0.2)] z-11 bottom-[-65px] left-1/2 -translate-x-1/2"></div>
 
       {/* Small rectangles under (bottoms of) armrests and seat cushions */}
       {/* Left armrest foot */}
