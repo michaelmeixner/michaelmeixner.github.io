@@ -29,6 +29,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Copy .nojekyll
+        run: cp public/.nojekyll dist/.nojekyll
       - name: Verify build output
         run: ls -R ./dist
       - name: Setup Pages
