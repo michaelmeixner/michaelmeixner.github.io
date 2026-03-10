@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream-background: #ffe599;
+  --cookie-monster-blue: #2094bd;
+  --metal-color: #bcbcbc;
+}
