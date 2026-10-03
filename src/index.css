@@ -1,11 +1,192 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: "Engschrift Austria W01 D";
+  src: url("/fonts/engschrift-austria.woff2") format("woff2"),
+       url("/fonts/engschrift-austria.woff")  format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  --cream-background: #ffe599;
+  font-family: "Times New Roman", Times, serif;
+  color: #1d2f31;
+  font-synthesis: none;
+
+  /* EyeCard */
+  --cream-background:    #ffe599;
   --cookie-monster-blue: #2094bd;
-  --metal-color: #bcbcbc;
-  --eye-background: #fbf0dc;
-  
+  --metal-color:         #bcbcbc;
+  --eye-background:      #fbf0dc;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #315d68;
+  background-image:
+    radial-gradient(#f6e7c4 0.7px, transparent 0.8px),
+    radial-gradient(#8eb3b6 0.7px, transparent 0.8px);
+  background-position: 0 0, 13px 13px;
+  background-size: 26px 26px;
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+::selection { color: #fff4d6; background: #a9322c; }
+
+.noise {
+  position: fixed;
+  z-index: 200;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+}
+
+.site-shell {
+  width: min(1180px, calc(100% - 24px));
+  margin: 12px auto;
+  border: 2px solid #f6e7c4;
+  box-shadow: 0 0 0 2px #293b3d, 10px 10px 0 rgba(31, 45, 46, 0.55);
+}
+
+.hit-counter {
+  padding: 1px 4px;
+  color: #f3bf58;
+  background: #263c3f;
+  border: 1px inset #d7c7a8;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.18em;
+}
+
+.logo {
+  display: inline-block;
+  font-family: "Engschrift Austria W01 D", "DIN 1451", sans-serif;
+  font-size: clamp(2.6rem, 7vw, 5.7rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.logo span { color: #a9322c; }
+
+nav a { border-bottom: 1px solid transparent; transition: color 0.15s; }
+nav a:hover { color: #a9322c; border-color: currentColor; }
+
+.online-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c8463d;
+  box-shadow: 0 0 0 2px rgba(200, 70, 61, 0.2);
+  animation: blink-dot 1.5s steps(2) infinite;
+}
+
+.hero-title {
+  font-family: "Engschrift Austria W01 D", "DIN 1451", sans-serif;
+  font-size: clamp(4.5rem, 10vw, 10.5rem);
+  letter-spacing: 0.06em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.hero-title em {
+  color: #a9322c;
+  font-style: normal;
+}
+
+.section-title {
+  font-family: "Engschrift Austria W01 D", "DIN 1451", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.classic-link {
+  color: #9f302b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.image-frame { box-shadow: 6px 6px 0 #293b3d; }
+.image-frame img {
+  filter: sepia(0.16) saturate(1.15) contrast(1.05);
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 700ms ease;
+}
+.image-frame:hover img {
+  transform: scale(1.025);
+  filter: sepia(0.06) saturate(1.35) contrast(1.08);
+}
+
+.marquee { white-space: nowrap; overflow: hidden; }
+.marquee-track {
+  display: inline-block;
+  animation: marquee 32s linear infinite;
+}
+
+article h3 a {
+  background-image: linear-gradient(#e1b45b, #e1b45b);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 14%;
+  transition: background-size 250ms ease;
+}
+article:hover h3 a { background-size: 100% 14%; }
+
+.web-button {
+  color: #1d2f31;
+  background: #b2a58d;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f6e7c4 #4b4a40 #4b4a40 #f6e7c4;
+  box-shadow: 1px 1px 0 #293b3d;
+}
+.web-button:active {
+  border-color: #4b4a40 #f6e7c4 #f6e7c4 #4b4a40;
+  box-shadow: none;
+  transform: translate(1px, 1px);
+}
+
+.inset-field {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #4b4a40 #f6e7c4 #f6e7c4 #4b4a40;
+}
+
+.bevel-box {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f6e7c4 #4b4a40 #4b4a40 #f6e7c4;
+}
+
+.blink-text { animation: old-blink 1s steps(2, jump-none) infinite; }
+
+@keyframes blink-dot { 50% { opacity: 0.35; } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes old-blink { 50% { visibility: hidden; } }
+
+@media (max-width: 640px) {
+  .site-shell {
+    width: 100%;
+    margin: 0;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+  }
+  .hero-title { line-height: 0.84; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
