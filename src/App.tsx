@@ -19,7 +19,7 @@ export default function App() {
       <div className="site-shell overflow-x-hidden bg-[#b2a58d] text-[#1d2f31]">
         <Nav />
 
-        <div className="relative z-10 bg-[#d6a344] px-2 py-1 text-center font-mono text-[10px] font-bold uppercase text-[#37291e]">
+        <div className="relative z-[11] bg-[#d6a344] px-2 py-1 text-center font-mono text-[10px] font-bold uppercase text-[#37291e] shadow-[0_4px_0_#6f2b27]">
           *** Welcome to our little corner of the World Wide Web! ***
         </div>
 
