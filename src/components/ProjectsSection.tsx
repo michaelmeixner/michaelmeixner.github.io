@@ -5,7 +5,7 @@ import { supabase } from "../lib/supabase";
 const WOCHENFRAGE = {
   week: 1,
   year: 2026,
-  question: "",
+  question: "What's your top song on spotify (or whatever music service you use) this week?",
   hint: "",
 };
 
