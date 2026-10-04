@@ -7,7 +7,7 @@ import { TheEyeSection } from "./components/TheEyeSection";
 import { ContactSection } from "./components/ContactSection";
 
 const MARQUEE_TEXT =
-  "Bei Meixner   ★   Wien, Österreich   ★   The internet is more fun when it feels small   ★   Wochenfrage · Das Auge · Gästebuch   ★   ";
+  "Bei Meixner   ★   Atlanta, Georgia, USA   ★   The internet is more fun when it feels small   ★   ";
 
 export default function App() {
   useEffect(() => { logVisit(); }, []);
