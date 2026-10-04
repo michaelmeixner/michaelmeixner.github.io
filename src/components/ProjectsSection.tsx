@@ -42,7 +42,7 @@ export function ProjectsSection() {
       <div className="mb-10 flex items-end justify-between border-b-2 border-black pb-3">
         <div>
           <h2 className="section-title">Weekly Question</h2>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/30">
+          <span className="subhead text-xs uppercase tracking-widest text-[#293b3d]/30">
             Wochenfrage
           </span>
         </div>

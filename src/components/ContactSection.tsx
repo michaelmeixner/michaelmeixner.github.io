@@ -83,11 +83,11 @@ export function ContactSection() {
       >
         {/* Left: description */}
         <div className="p-6 sm:p-10 lg:border-r lg:border-white/20 lg:p-16">
-          <p className="mb-8 font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#e8c46b]">
+          <p className="subhead mb-8 text-sm font-medium uppercase tracking-[0.25em] text-[#e8c46b]">
             Guestbook
           </p>
-          <h2 className="section-title max-w-xs">Leave something for the next person.</h2>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-white/25">
+          <h2 className="section-title max-w-md">Leave something for the next person.</h2>
+          <span className="subhead text-xs uppercase tracking-widest text-white/25">
             Gästebuch
           </span>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-white/80">
@@ -169,13 +169,13 @@ export function ContactSection() {
         className="relative z-10 border-t-2 border-[#293b3d] bg-[#8eb3b6] px-4 py-16 sm:px-8 lg:px-10 lg:py-24"
       >
         <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-6 font-mono text-xs font-bold uppercase tracking-[0.3em]">
+          <p className="subhead mb-6 text-sm font-medium uppercase tracking-[0.3em]">
             Gelegentlich ein Brief aus der Ecke
           </p>
-          <h2 className="hero-title text-[clamp(3.5rem,10vw,8rem)]">
+          <h2 className="hero-title text-[clamp(2.6rem,7vw,6rem)]">
             Don't be a stranger.
           </h2>
-          <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-[#1d2f31]/35">
+          <p className="subhead mt-2 text-xs uppercase tracking-widest text-[#1d2f31]/35">
             Nicht fremd bleiben.
           </p>
           <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed">

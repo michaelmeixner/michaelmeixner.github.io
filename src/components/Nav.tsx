@@ -35,7 +35,7 @@ export function Nav() {
         </a>
         <nav className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs font-bold uppercase">
           <a href="#wochenfrage">[Weekly Question]</a>
-          <a href="#eye">[The Eye]</a>
+          <a href="#eye">[Cookies]</a>
           <a href="#gaestebuch">[Guestbook]</a>
         </nav>
       </div>

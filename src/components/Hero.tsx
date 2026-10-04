@@ -13,22 +13,18 @@ export function Hero() {
       {/* Left: welcome */}
       <div className="flex min-h-[560px] flex-col justify-between p-6 sm:p-10 lg:min-h-[640px] lg:border-r-2 lg:border-[#293b3d] lg:p-12">
         <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/50">
-          <span>Bei Meixner · A Corner of the Internet</span>
-          <span>[ Est. 1996 ]</span>
+          <span>Bei Meixner · An internet cafe built like they used to be.</span>
+          <span>[ Est. 2026 ]</span>
         </div>
 
         <div className="py-12 lg:py-8">
-          <p className="blink-text mb-5 font-mono text-xs font-bold uppercase tracking-[0.15em] text-[#a9322c]">
-            &lt;WILLKOMMEN!&gt; You found the place
-          </p>
-          <h1 className="hero-title">
+          {/* <h1 className="hero-title">
             MICHAEL
             <br />
             <em>MEIXNER.</em>
-          </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
-            Software developer in Wien. This is my little corner of the internet — not a portfolio,
-            just a place. Come in, look around, leave a note.
+          </h1> */}
+          <p className="max-w-xl text-lg leading-relaxed sm:text-xl">
+            Software developer in Atlanta. This is my internet cafe. Come in, look around, leave a note.
           </p>
         </div>
 

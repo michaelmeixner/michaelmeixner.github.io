@@ -20,7 +20,7 @@ export default function App() {
         <Nav />
 
         <div className="relative z-[11] bg-[#d6a344] px-2 py-1 text-center font-mono text-[10px] font-bold uppercase text-[#37291e] shadow-[0_4px_0_#6f2b27]">
-          *** Welcome to our little corner of the World Wide Web! ***
+          <span className="blink-text">&lt;WILLKOMMEN!&gt; You found the place</span>
         </div>
 
         <Hero />

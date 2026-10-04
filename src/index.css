@@ -1,8 +1,23 @@
 @font-face {
-  font-family: "Engschrift Austria W01 D";
-  src: url("/fonts/engschrift-austria.woff2") format("woff2"),
-       url("/fonts/engschrift-austria.woff")  format("woff");
+  font-family: "Walbaum Book Pro";
+  src: url("/fonts/WalbaumBookPro-Regular.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Now Text";
+  src: url("/fonts/FuturaNowText-Rg.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Now Text";
+  src: url("/fonts/FuturaNowText-Md.woff2") format("woff2");
+  font-weight: 500 700;
   font-style: normal;
   font-display: swap;
 }
@@ -65,9 +80,9 @@ a { color: inherit; text-decoration: none; }
 
 .logo {
   display: inline-block;
-  font-family: "Engschrift Austria W01 D", "DIN 1451", sans-serif;
-  font-size: clamp(2.6rem, 7vw, 5.7rem);
-  letter-spacing: 0.04em;
+  font-family: "Walbaum Book Pro", "Bodoni 72", Didot, serif;
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  letter-spacing: 0.02em;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -88,10 +103,10 @@ nav a:hover { color: #a9322c; border-color: currentColor; }
 }
 
 .hero-title {
-  font-family: "Engschrift Austria W01 D", "DIN 1451", sans-serif;
-  font-size: clamp(4.5rem, 10vw, 10.5rem);
-  letter-spacing: 0.06em;
-  line-height: 0.88;
+  font-family: "Walbaum Book Pro", "Bodoni 72", Didot, serif;
+  font-size: clamp(3.2rem, 7.5vw, 7.5rem);
+  letter-spacing: 0.01em;
+  line-height: 0.92;
   text-transform: uppercase;
 }
 
@@ -101,11 +116,15 @@ nav a:hover { color: #a9322c; border-color: currentColor; }
 }
 
 .section-title {
-  font-family: "Engschrift Austria W01 D", "DIN 1451", sans-serif;
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  letter-spacing: 0.08em;
-  line-height: 0.95;
+  font-family: "Walbaum Book Pro", "Bodoni 72", Didot, serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  letter-spacing: 0.02em;
+  line-height: 1;
   text-transform: uppercase;
+}
+
+.subhead {
+  font-family: "Futura Now Text", Futura, "Century Gothic", sans-serif;
 }
 
 .classic-link {
