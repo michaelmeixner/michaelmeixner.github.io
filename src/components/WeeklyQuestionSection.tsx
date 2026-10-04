@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
-
-// Update each Monday
-const WOCHENFRAGE = {
-  week: 1,
-  year: 2026,
-  question: "What's your top song on spotify (or whatever music service you use) this week?",
-  hint: "",
-};
+import { WOCHENFRAGE } from "../lib/wochenfrage";
 
 interface Answer {
   name: string;
@@ -15,7 +8,7 @@ interface Answer {
   created_at: string;
 }
 
-export function ProjectsSection() {
+export function WeeklyQuestionSection() {
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [name, setName] = useState("");
   const [answer, setAnswer] = useState("");

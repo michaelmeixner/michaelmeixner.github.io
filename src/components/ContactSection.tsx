@@ -33,7 +33,7 @@ export function ContactSection() {
             data.map((row) => ({
               name: row.name,
               message: row.message,
-              time: new Date(row.created_at).toLocaleDateString("en-GB"),
+              time: new Date(row.created_at).toLocaleDateString("en-US"),
             }))
           );
         }
@@ -84,14 +84,12 @@ export function ContactSection() {
         {/* Left: description */}
         <div className="p-6 sm:p-10 lg:border-r lg:border-white/20 lg:p-16">
           <p className="subhead mb-8 text-sm font-medium uppercase tracking-[0.25em] text-[#e8c46b]">
-            Guestbook
+            Guestbook{" "}
+            <span className="text-[#e8c46b]/40">Gästebuch</span>
           </p>
           <h2 className="section-title max-w-md">Leave something for the next person.</h2>
-          <span className="subhead text-xs uppercase tracking-widest text-white/25">
-            Gästebuch
-          </span>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-white/80">
-            No likes, no follower counts. Just a small corner of the web where you can say hello.
+            Leave a joke, make a suggestion, or just say hello.
           </p>
           <p className="mt-6 font-mono text-[10px] uppercase tracking-widest text-white/40">
             No account required
@@ -170,7 +168,7 @@ export function ContactSection() {
       >
         <div className="mx-auto max-w-4xl text-center">
           <p className="subhead mb-6 text-sm font-medium uppercase tracking-[0.3em]">
-            Gelegentlich ein Brief aus der Ecke
+            Sign up for questions and news from the cafe.
           </p>
           <h2 className="hero-title text-[clamp(2.6rem,7vw,6rem)]">
             Don't be a stranger.
@@ -179,7 +177,7 @@ export function ContactSection() {
             Nicht fremd bleiben.
           </p>
           <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed">
-            New questions, good links, and a reason to come back. Every now and then.
+            New questions, good links, and a reason to come back every now and then.
           </p>
 
           {subscribed ? (
@@ -229,17 +227,7 @@ export function ContactSection() {
               GitHub
             </a>
           </div>
-          <span>Made for humans · Not for robots</span>
-        </div>
-
-        {/* Webring ornament */}
-        <div className="mx-auto mt-10 max-w-xl border-2 border-[#f6e7c4] bg-[#b2a58d] p-3 text-center font-mono text-[10px] text-[#1d2f31] shadow-[inset_2px_2px_0_#766b59,inset_-2px_-2px_0_#f6e7c4]">
-          <p className="font-bold uppercase">The Small Web Webring</p>
-          <p className="mt-2">
-            <a className="classic-link" href="#top">&lt;&lt; Previous</a>
-            <span className="mx-4">[ Random site ]</span>
-            <a className="classic-link" href="#top">Next &gt;&gt;</a>
-          </p>
+          <span>Made for humans</span>
         </div>
       </footer>
     </>

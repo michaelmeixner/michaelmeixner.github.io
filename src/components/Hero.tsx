@@ -1,10 +1,18 @@
-const WOCHENFRAGE = {
-  week: 42,
-  question: "Welches Lied hörst du gerade auf Repeat?",
-  hint: "What song have you had on repeat lately?",
-};
+import { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
+import { WOCHENFRAGE } from "../lib/wochenfrage";
 
 export function Hero() {
+  const [answerCount, setAnswerCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    supabase
+      .from("wochenfrage_answers")
+      .select("*", { count: "exact", head: true })
+      .eq("week", WOCHENFRAGE.week)
+      .then(({ count }) => { if (count != null) setAnswerCount(count); });
+  }, []);
+
   return (
     <section
       id="top"
@@ -12,21 +20,14 @@ export function Hero() {
     >
       {/* Left: welcome */}
       <div className="flex min-h-[560px] flex-col justify-between p-6 sm:p-10 lg:min-h-[640px] lg:border-r-2 lg:border-[#293b3d] lg:p-12">
-        <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/50">
+        <div className="subhead flex items-center justify-between text-[10px] uppercase tracking-widest text-[#293b3d]/50">
           <span>Bei Meixner · An internet cafe built like they used to be.</span>
-          <span>[ Est. 2026 ]</span>
+          {/* <span>[ Est. 2026 ]</span> */}
         </div>
 
-        <div className="py-12 lg:py-8">
-          {/* <h1 className="hero-title">
-            MICHAEL
-            <br />
-            <em>MEIXNER.</em>
-          </h1> */}
-          <p className="max-w-xl text-lg leading-relaxed sm:text-xl">
-            Software developer in Atlanta. This is my internet cafe. Come in, look around, leave a note.
-          </p>
-        </div>
+        <p className="max-w-xl text-lg leading-relaxed sm:text-xl">
+          Software developer in Atlanta. This is my internet cafe. Come in, look around, leave a note.
+        </p>
 
         <div className="flex flex-wrap items-center gap-5">
           <a
@@ -48,21 +49,19 @@ export function Hero() {
             <span>about.txt</span>
             <span className="opacity-60">— □ ×</span>
           </div>
-          <div className="p-5 font-mono text-sm leading-relaxed text-[#1d2f31]">
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
+          <div className="p-5 font-mono text-sm text-[#1d2f31]">
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
               // who is this guy
             </p>
-            <p>
-              <span className="text-[#a9322c]">name:</span>&nbsp;&nbsp;&nbsp;&nbsp; Michael Meixner
-            </p>
-            <p>
-              <span className="text-[#a9322c]">lives:</span>&nbsp;&nbsp;&nbsp;&nbsp; Atlanta, Georgia, USA
-            </p>
-            <p>
-              <span className="text-[#a9322c]">makes:</span>&nbsp;&nbsp;&nbsp; Software, coffee, food, vibes
-            </p>
+            <div className="space-y-1 leading-relaxed">
+              <p><span className="text-[#a9322c]">name:</span>&nbsp;&nbsp;&nbsp;&nbsp; Michael Meixner</p>
+              <p><span className="text-[#a9322c]">lives:</span>&nbsp;&nbsp;&nbsp;&nbsp; Atlanta, Georgia, USA</p>
+              <p><span className="text-[#a9322c]">makes:</span>&nbsp;&nbsp;&nbsp; Software, coffee, food, vibes</p>
+            </div>
+
             <div className="my-4 border-t border-[#293b3d]/20" />
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
+
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
               // currently into
             </p>
             <p className="leading-relaxed">
@@ -72,14 +71,37 @@ export function Hero() {
               <br />
               Making things with a point of view.
             </p>
+
             <div className="my-4 border-t border-[#293b3d]/20" />
-            <p className="text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
-              // wochenfrage #{WOCHENFRAGE.week}
+
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
+              // weekly question · woche #{WOCHENFRAGE.week}
             </p>
-            <p className="mt-2 italic leading-relaxed">
-              &ldquo;{WOCHENFRAGE.question}&rdquo;
-            </p>
-            <p className="mt-1 text-[10px] text-[#293b3d]/40">{WOCHENFRAGE.hint}</p>
+            {WOCHENFRAGE.question ? (
+              <>
+                <p className="italic leading-relaxed">
+                  &ldquo;{WOCHENFRAGE.question}&rdquo;
+                </p>
+                {WOCHENFRAGE.hint && (
+                  <p className="mt-1 text-[10px] text-[#293b3d]/40">{WOCHENFRAGE.hint}</p>
+                )}
+                {answerCount != null && answerCount > 0 && (
+                  <p className="mt-1 text-[10px] text-[#a9322c]">
+                    ↳ {answerCount} {answerCount === 1 ? "person" : "people"} answered
+                  </p>
+                )}
+              </>
+            ) : (
+              <p className="italic text-[10px] text-[#293b3d]/30">
+                No question posted yet. Check back soon.
+              </p>
+            )}
+            <a
+              href="#wochenfrage"
+              className="classic-link mt-3 block text-[10px] uppercase tracking-widest"
+            >
+              → answer this week's question
+            </a>
           </div>
         </div>
       </div>
