@@ -56,21 +56,21 @@ export function Hero() {
               <span className="text-[#a9322c]">name:</span>&nbsp;&nbsp;&nbsp;&nbsp; Michael Meixner
             </p>
             <p>
-              <span className="text-[#a9322c]">lives:</span>&nbsp;&nbsp;&nbsp;&nbsp; Wien, Österreich
+              <span className="text-[#a9322c]">lives:</span>&nbsp;&nbsp;&nbsp;&nbsp; Atlanta, Georgia, USA
             </p>
             <p>
-              <span className="text-[#a9322c]">makes:</span>&nbsp;&nbsp;&nbsp; Software for the web
+              <span className="text-[#a9322c]">makes:</span>&nbsp;&nbsp;&nbsp; Software, coffee, food, vibes
             </p>
             <div className="my-4 border-t border-[#293b3d]/20" />
             <p className="mb-3 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
               // currently into
             </p>
             <p className="leading-relaxed">
-              Pixel art. Espresso.
+              Fashion. Interesting silhouettes, unusual pairings.
               <br />
-              Long walks with no destination.
+              Mobility training, meditation.
               <br />
-              Making things that feel alive.
+              Making things with a point of view.
             </p>
             <div className="my-4 border-t border-[#293b3d]/20" />
             <p className="text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">

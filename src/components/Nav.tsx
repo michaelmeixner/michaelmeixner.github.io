@@ -18,7 +18,7 @@ export function Nav() {
     <header className="sticky top-0 z-10 border-b-2 border-[#293b3d] bg-[#b2a58d]">
       {/* Status bar */}
       <div className="flex items-center justify-between border-b-2 border-[#f6e7c4] bg-[#315d68] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[#fff4d6] sm:px-5">
-        <span>Bei Meixner · Est. 1996</span>
+        {/* <span>Bei Meixner · Est. 1996</span> */}
         <span className="hidden items-center gap-2 sm:flex">
           Visitors: <b className="hit-counter">{formatted}</b>
         </span>

@@ -87,7 +87,10 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 
-.logo span { color: #a9322c; }
+.logo span {
+  color: #a9322c;
+  text-shadow: 0.04em 0.04em 0 #e1b45b;
+}
 
 nav a { border-bottom: 1px solid transparent; transition: color 0.15s; }
 nav a:hover { color: #a9322c; border-color: currentColor; }
