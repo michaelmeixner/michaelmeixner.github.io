@@ -89,6 +89,16 @@ export function DiscussionOverlay({ item, onClose }: { item: MediaItem; onClose:
                 {item.creator}{item.year ? ` · ${item.year}` : ""}
               </p>
               <p className="mt-4 max-w-lg leading-relaxed text-[#1d2f31]">{item.note}</p>
+              {item.link && (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="classic-link mt-3 inline-block font-mono text-[10px] uppercase tracking-widest"
+                >
+                  → View link ↗
+                </a>
+              )}
             </div>
           </div>
 
@@ -106,9 +116,9 @@ export function DiscussionOverlay({ item, onClose }: { item: MediaItem; onClose:
               {!loading && entries.length === 0 && <p className="p-4 font-mono text-xs italic text-black/40">No replies yet. Be the first.</p>}
               {entries.map((entry, i) => (
                 <div key={i} className="grid grid-cols-[1fr_auto] gap-2 border-b border-black/20 p-4 last:border-0">
-                  <p className="font-mono text-xs leading-relaxed">
-                    <span className="font-bold" style={{ color: accentColor }}>{entry.name}</span>
-                    <span className="mx-2">:</span>
+                  <p className="text-sm leading-relaxed">
+                    <span className="font-mono text-xs font-bold" style={{ color: accentColor }}>{entry.name}</span>
+                    <span className="font-mono mx-2 text-xs">:</span>
                     {entry.message}
                   </p>
                   <span className="whitespace-nowrap font-mono text-[9px] uppercase text-black/40">

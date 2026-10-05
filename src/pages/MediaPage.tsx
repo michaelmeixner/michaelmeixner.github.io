@@ -33,8 +33,8 @@ function SuggestForm() {
   if (sent) {
     return (
       <div className="bevel-box bg-[#b2a58d] p-6 font-mono text-sm text-[#1d2f31]">
-        <p className="font-bold text-[#2D6B3F]">Thanks. ✓</p>
-        <p className="mt-1 text-[#293b3d]/60">Your suggestion is in — we'll review it soon.</p>
+        <p className="font-bold text-[#2D6B3F]">Thanks.</p>
+        <p className="mt-1 text-[#293b3d]/60">Your suggestion is in; I'll review it soon.</p>
       </div>
     );
   }
@@ -130,11 +130,8 @@ export function MediaPage({ onBack }: { onBack: () => void }) {
           ← Back to Bei Meixner
         </button>
         <h1 className="section-title text-[clamp(2rem,5vw,3.5rem)]">On the Shelf</h1>
-        <span className="font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/30">
-          Was ich gerade liebe
-        </span>
         <p className="mt-3 max-w-lg text-sm leading-relaxed text-[#293b3d]/60">
-          What I'm into right now. Click any card to read more and leave a comment.
+          What I'm into right now. Click any item to read more and start or continue a discussion about it.
         </p>
       </div>
 

@@ -23,7 +23,7 @@
 }
 
 :root {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Futura Now Text", Futura, "Century Gothic", sans-serif;
   color: #1d2f31;
   font-synthesis: none;
 
@@ -40,6 +40,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-width: 320px;
+  font-family: "Futura Now Text", Futura, "Century Gothic", sans-serif;
   background-color: #315d68;
   background-image:
     radial-gradient(#f6e7c4 0.7px, transparent 0.8px),

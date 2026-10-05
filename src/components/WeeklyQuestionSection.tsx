@@ -61,9 +61,6 @@ export function WeeklyQuestionSection() {
 
       <div className="grid gap-10">
         <div>
-          <p className="mb-4 font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/40">
-            This week I'm asking:
-          </p>
           <blockquote className="section-title mb-3 text-[clamp(1.8rem,4vw,3.2rem)] leading-tight">
             &ldquo;{WOCHENFRAGE.question}&rdquo;
           </blockquote>

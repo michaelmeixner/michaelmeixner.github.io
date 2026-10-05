@@ -66,10 +66,20 @@ export function ContactSection() {
 
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [subError, setSubError] = useState(false);
 
-  function subscribe(event: FormEvent<HTMLFormElement>) {
+  async function subscribe(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!email.trim()) return;
+    const trimmed = email.trim();
+    if (!trimmed) return;
+    setSubError(false);
+    const { error } = await supabase
+      .from("newsletter_subscribers")
+      .insert({ email: trimmed });
+    if (error && error.code !== "23505") {
+      setSubError(true);
+      return;
+    }
     setSubscribed(true);
     setEmail("");
   }
@@ -146,9 +156,9 @@ export function ContactSection() {
                   key={`${entry.name}-${i}`}
                   className="grid grid-cols-[1fr_auto] gap-2 border-b border-black/20 p-4 last:border-0"
                 >
-                  <p className="font-mono text-xs leading-relaxed">
-                    <span className="font-bold text-[#9f302b]">{entry.name}</span>
-                    <span className="mx-2">:</span>
+                  <p className="text-sm leading-relaxed">
+                    <span className="font-mono text-xs font-bold text-[#9f302b]">{entry.name}</span>
+                    <span className="font-mono mx-2 text-xs">:</span>
                     {entry.message}
                   </p>
                   <span className="font-mono text-[9px] uppercase text-black/50 whitespace-nowrap">
@@ -209,10 +219,25 @@ export function ContactSection() {
               </button>
             </form>
           )}
+          {subError && (
+            <p className="mt-3 font-mono text-xs text-[#a9322c]">Something went wrong. Try again.</p>
+          )}
+        </div>
+
+        {/* Colophon */}
+        <div className="mx-auto mt-20 max-w-2xl border-t-2 border-black/20 pt-10 text-center font-mono text-[10px] leading-relaxed text-[#1d2f31]/50">
+          <p className="subhead mb-2 font-bold uppercase tracking-widest">Colophon</p>
+          <p>
+            Built by hand in Atlanta, Georgia. Set in{" "}
+            Walbaum Book Pro,{" "}
+            Futura Now, and system monospace.
+            Made with React, Vite, and Tailwind CSS. Hosted on GitHub Pages.
+            Data stored in Supabase.
+          </p>
         </div>
 
         {/* Footer bar */}
-        <div className="mt-20 flex flex-col gap-4 border-t-2 border-black pt-5 font-mono text-[9px] font-bold uppercase tracking-widest sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t-2 border-black pt-5 font-mono text-[9px] font-bold uppercase tracking-widest sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} Michael Meixner</span>
           <div className="flex flex-wrap gap-5">
             <a className="underline" href="#top">Top of page</a>

@@ -16,7 +16,7 @@ function CdCaseCover({ item, onClick }: { item: MediaItem; onClick: () => void }
         className="relative w-full overflow-hidden transition-transform duration-150 group-hover:-translate-y-2"
         style={{
           height: 207,
-          boxShadow: "4px 6px 0 #1d2f31, 6px 9px 0 rgba(29,47,49,0.35)",
+          boxShadow: "5px 7px 0 #1d2f31",
         }}
       >
         {/* Grey plastic spine — outer edge of the case past the hinge */}
@@ -46,34 +46,49 @@ function CdCaseCover({ item, onClick }: { item: MediaItem; onClick: () => void }
             className="absolute inset-0 pointer-events-none"
             style={{ boxShadow: "inset 0 0 0 2px rgba(255,255,255,0.15), inset 0 0 8px rgba(0,0,0,0.25)" }}
           />
-          <div className="relative z-10 flex h-full flex-col justify-between p-[15px]">
-            <span
-              className="self-start px-1.5 py-0.5 font-mono text-[11px] font-bold uppercase tracking-widest"
-              style={{ background: "rgba(0,0,0,0.45)", color: "#fff4d6" }}
-            >
-              {item.category}
-            </span>
-            <div>
-              <p
-                className="line-clamp-2 text-[15px] font-bold uppercase leading-tight tracking-wide"
-                style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: item.image ? "#fff" : "#fff4d6", textShadow: item.image ? "0 1px 4px rgba(0,0,0,0.7)" : "none" }}
+          {!item.image && (
+            <div className="relative z-10 flex h-full flex-col justify-between p-[15px]">
+              <span
+                className="self-start px-1.5 py-0.5 font-mono text-[11px] font-bold uppercase tracking-widest"
+                style={{ background: "rgba(0,0,0,0.45)", color: "#fff4d6" }}
               >
-                {item.title}
-              </p>
-              {item.creator && (
+                {item.category}
+              </span>
+              <div>
                 <p
-                  className="mt-1 font-mono text-[11px] leading-tight"
-                  style={{ color: item.image ? "rgba(255,255,255,0.75)" : "rgba(255,244,214,0.65)", textShadow: item.image ? "0 1px 3px rgba(0,0,0,0.7)" : "none" }}
+                  className="line-clamp-2 text-[15px] font-bold uppercase leading-tight tracking-wide"
+                  style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#fff4d6" }}
                 >
-                  {item.creator}
+                  {item.title}
                 </p>
-              )}
+                {item.creator && (
+                  <p className="mt-1 font-mono text-[11px] leading-tight" style={{ color: "rgba(255,244,214,0.65)" }}>
+                    {item.creator}
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
-      {item.year && (
-        <p className="mt-2 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.year}</p>
+      {item.image ? (
+        <div className="mt-2 w-full">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
+          <p
+            className="mt-0.5 line-clamp-2 text-[13px] font-bold uppercase leading-tight tracking-wide"
+            style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1d2f31" }}
+          >
+            {item.title}
+          </p>
+          {item.creator && (
+            <p className="mt-0.5 font-mono text-[10px] text-[#293b3d]/50">{item.creator}</p>
+          )}
+          {item.year && (
+            <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.year}</p>
+          )}
+        </div>
+      ) : (
+        <p className="mt-2 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
       )}
     </button>
   );
@@ -95,7 +110,7 @@ function NotecardCover({ item, onClick }: { item: MediaItem; onClick: () => void
           height: 155,
           borderRadius: 3,
           background: "#2D6B3F",
-          boxShadow: "3px 5px 0 #1a3d28, 5px 8px 0 rgba(26,61,40,0.4)",
+          boxShadow: "5px 7px 0 #1a3d28",
         }}
       >
         {/* Ruled lines */}
@@ -112,31 +127,40 @@ function NotecardCover({ item, onClick }: { item: MediaItem; onClick: () => void
         />
 
         {/* Content */}
-        <div className="absolute inset-0 flex flex-col justify-between p-3 pl-[44px]">
-          <span
-            className="self-start px-1.5 py-0.5 font-mono text-[11px] font-bold uppercase tracking-widest"
-            style={{ background: "rgba(0,0,0,0.45)", color: "#fff4d6" }}
+        <div className="absolute inset-0 pl-[44px] pr-3">
+          {/* Title between ruled lines 1 and 2 (~38–54px) */}
+          <p
+            className="absolute line-clamp-1 text-[13px] font-bold uppercase leading-none tracking-wide"
+            style={{ top: 40, left: 44, right: 12, fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#fff4d6" }}
           >
-            {item.category}
-          </span>
-          <div>
+            {item.title}
+          </p>
+          {/* Creator between ruled lines 2 and 3 (~54–70px) */}
+          {item.creator && (
             <p
-              className="line-clamp-2 text-[15px] font-bold uppercase leading-tight tracking-wide"
-              style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#fff4d6" }}
+              className="absolute font-mono text-[10px] leading-none"
+              style={{ top: 57, left: 44, color: "rgba(255,244,214,0.6)" }}
             >
-              {item.title}
+              {item.creator}
             </p>
-            {item.creator && (
-              <p className="mt-0.5 font-mono text-[10px]" style={{ color: "rgba(255,244,214,0.6)" }}>
-                {item.creator}
-              </p>
-            )}
-          </div>
+          )}
         </div>
       </div>
-      {item.year && (
-        <p className="mt-2 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.year}</p>
-      )}
+      <div className="mt-2 w-full">
+        <p className="font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
+        <p
+          className="mt-0.5 line-clamp-2 text-[13px] font-bold uppercase leading-tight tracking-wide"
+          style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1d2f31" }}
+        >
+          {item.title}
+        </p>
+        {item.creator && (
+          <p className="mt-0.5 font-mono text-[10px] text-[#293b3d]/50">{item.creator}</p>
+        )}
+        {item.year && (
+          <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.year}</p>
+        )}
+      </div>
     </button>
   );
 }
@@ -160,7 +184,7 @@ function MediaCover({ item, onClick }: { item: MediaItem; onClick: () => void })
         style={{
           height: 273,
           borderRadius: item.category === "Film" ? 5 : 0,
-          boxShadow: "4px 6px 0 #1d2f31, 6px 9px 0 rgba(29,47,49,0.35)",
+          boxShadow: "5px 7px 0 #1d2f31",
         }}
       >
         {/* Spine */}
@@ -182,44 +206,51 @@ function MediaCover({ item, onClick }: { item: MediaItem; onClick: () => void })
               alt={item.title}
               className="absolute inset-0 h-full w-full object-cover"
             />
-          ) : null}
-
-          {/* Overlay text on cover */}
-          <div className="relative z-10 flex flex-col justify-between h-full">
-            <span
-              className="self-start px-1.5 py-0.5 font-mono text-[11px] font-bold uppercase tracking-widest"
-              style={{
-                background: "rgba(0,0,0,0.45)",
-                color: "#fff4d6",
-              }}
-            >
-              {item.category}
-            </span>
-            <div>
-              <p
-                className="line-clamp-3 text-[16px] font-bold uppercase leading-tight tracking-wide"
-                style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: item.image ? "#fff" : "#fff4d6", textShadow: item.image ? "0 1px 4px rgba(0,0,0,0.7)" : "none" }}
+          ) : (
+            <div className="relative z-10 flex flex-col justify-between h-full">
+              <span
+                className="self-start px-1.5 py-0.5 font-mono text-[11px] font-bold uppercase tracking-widest"
+                style={{ background: "rgba(0,0,0,0.45)", color: "#fff4d6" }}
               >
-                {item.title}
-              </p>
-              {item.creator && (
+                {item.category}
+              </span>
+              <div>
                 <p
-                  className="mt-1 font-mono text-[11px] leading-tight"
-                  style={{ color: item.image ? "rgba(255,255,255,0.75)" : "rgba(255,244,214,0.65)", textShadow: item.image ? "0 1px 3px rgba(0,0,0,0.7)" : "none" }}
+                  className="line-clamp-3 text-[16px] font-bold uppercase leading-tight tracking-wide"
+                  style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#fff4d6" }}
                 >
-                  {item.creator}
+                  {item.title}
                 </p>
-              )}
+                {item.creator && (
+                  <p className="mt-1 font-mono text-[11px] leading-tight" style={{ color: "rgba(255,244,214,0.65)" }}>
+                    {item.creator}
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 
-      {/* Label below */}
-      {item.year && (
-        <p className="mt-2 font-mono text-[14px] uppercase tracking-widest text-[#293b3d]/40">
-          {item.year}
-        </p>
+      {/* Label below — only when the cover face shows an image */}
+      {item.image ? (
+        <div className="mt-2 w-full">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
+          <p
+            className="mt-0.5 line-clamp-2 text-[13px] font-bold uppercase leading-tight tracking-wide"
+            style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1d2f31" }}
+          >
+            {item.title}
+          </p>
+          {item.creator && (
+            <p className="mt-0.5 font-mono text-[10px] text-[#293b3d]/50">{item.creator}</p>
+          )}
+          {item.year && (
+            <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.year}</p>
+          )}
+        </div>
+      ) : (
+        <p className="mt-2 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
       )}
     </button>
   );

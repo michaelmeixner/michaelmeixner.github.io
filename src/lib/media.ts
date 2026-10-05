@@ -8,6 +8,7 @@ export interface MediaItem {
   note: string;
   year?: string;
   image?: string; // path relative to /public, e.g. "/media/some-album.jpg"
+  link?: string;
 }
 
 export const CATEGORY_COLORS: Record<Category, string> = {
@@ -18,43 +19,48 @@ export const CATEGORY_COLORS: Record<Category, string> = {
   Other: "#766b59",
 };
 
-// ── Update this list whenever your taste changes ──────────────────────────────
 export const MEDIA: MediaItem[] = [
   {
     id: "media-1",
     category: "Film",
-    title: "Add a title",
-    creator: "Director / Artist / Publisher",
-    note: "Write why you love this right now.",
-    year: "2024",
+    title: "The French Dispatch",
+    creator: "Wes Anderson",
+    note: "A Wes Anderson film that is a love letter to journalism and the art of storytelling. Great vignettes and great cast.",
+    image: "/media/french_dispatch.jpeg",
   },
   {
     id: "media-2",
     category: "Music",
-    title: "Add a title",
-    creator: "Artist",
-    note: "Write why you love this right now.",
+    title: "Relaxer",
+    creator: "Alt J",
+    note: "Recently revisited this album and still enjoying it.",
+    image: "/media/relaxer_alt_j.jpeg",
   },
   {
     id: "media-3",
     category: "Magazine",
-    title: "Add a title",
-    creator: "Publisher",
-    note: "Write why you love this right now.",
+    title: "Issue #949: Cars",
+    creator: "Popeye Magazine",
+    note: "Awesome collection of interviews and photos of cars and their owners",
+    image: "/media/popeye_cars.webp",
   },
   {
     id: "media-4",
     category: "Recipe",
-    title: "Add a title",
-    creator: "Publisher",
-    note: "Write why you love this right now.",
+    title: "Tan Tan Ramen",
+    creator: "Woks of Life",
+    note: "Solid recipe. Tasty, relatively easy to make, and few specialized ingredients. Warning: does use a lot of pans.",
+    link: "https://thewoksoflife.com/tan-tan-ramen/#recipe",
+    image: "/media/tan_tan_ramen.jpeg",
   },
   {
     id: "media-5",
     category: "Other",
-    title: "Add a title",
-    creator: "Publisher",
-    note: "Write why you love this right now.",
+    title: "Articles of Interest",
+    creator: "Avery Trufelman",
+    note: "Killer podcast series about clothing, its history, and its cultural significance.",
+    image: "/media/articles_of_interest.jpeg",
+    link: "https://www.articlesofinterest.co/podcast",
   },
 ];
 // ─────────────────────────────────────────────────────────────────────────────

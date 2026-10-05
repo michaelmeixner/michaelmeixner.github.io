@@ -9,7 +9,7 @@ import { ContactSection } from "./components/ContactSection";
 import { MediaPage } from "./pages/MediaPage";
 
 const MARQUEE_TEXT =
-  "Bei Meixner   ★   Atlanta, Georgia, USA   ★   The internet is more fun when it feels small   ★   ";
+  "Bei Meixner   ★   Atlanta, Georgia, USA   ★   The internet is more fun with company   ★   ";
 
 export default function App() {
   const [page, setPage] = useState<"home" | "media">(() =>
@@ -67,12 +67,10 @@ export default function App() {
             permanently under construction
           </div>
           <div className="bevel-box p-3 text-center">
-            Best viewed at 1280 × 800 in any browser
+            There are alternate labels on this site in German
           </div>
           <div className="bevel-box p-3 text-center">
-            <a className="classic-link" href="mailto:hello@michaelmeixner.com">
-              Email the webmaster
-            </a>
+            I don't speak German, but it's my heritage
           </div>
         </aside>
 
