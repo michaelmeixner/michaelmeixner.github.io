@@ -71,5 +71,14 @@ export const MEDIA: MediaItem[] = [
     image: "/media/aca.jpeg",
     link: "https://autocatalogarchive.com",
   },
+  {
+    id: "media-7",
+    category: "Other",
+    title: "Arabic Design Archive",
+    creator: "Moe Elhossieny",
+    note: "A collection of Arabic design and typography resources. Very cool to explore art and design from different cultures.",
+    image: "/media/ada.png",
+    link: "https://arabicdesignarchive.com",
+  },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
