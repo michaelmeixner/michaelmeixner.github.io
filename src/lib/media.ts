@@ -62,5 +62,14 @@ export const MEDIA: MediaItem[] = [
     image: "/media/articles_of_interest.jpeg",
     link: "https://www.articlesofinterest.co/podcast",
   },
+  {
+    id: "media-6",
+    category: "Other",
+    title: "Auto Catalog Archive",
+    creator: "ACA",
+    note: "Cool website with a huge collection of new and old car brochures and catalogs. Great for research or just browsing.",
+    image: "/media/aca.jpeg",
+    link: "https://autocatalogarchive.com",
+  },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
