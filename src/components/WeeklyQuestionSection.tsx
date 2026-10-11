@@ -44,13 +44,13 @@ export function WeeklyQuestionSection() {
   return (
     <section
       id="wochenfrage"
-      className="relative z-10 bg-[#f0dfba] px-4 py-16 sm:px-8 lg:py-20"
+      className="relative z-10 bg-[#e8dfc8] px-4 py-16 sm:px-8 lg:py-20"
     >
       {/* Section header */}
       <div className="mb-10 flex items-end justify-between border-b-2 border-black pb-3">
         <div>
           <h2 className="section-title">Weekly Question</h2>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/30">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/30">
             Wochenfrage
           </span>
         </div>
@@ -65,34 +65,34 @@ export function WeeklyQuestionSection() {
             &ldquo;{WOCHENFRAGE.question}&rdquo;
           </blockquote>
           {WOCHENFRAGE.hint && (
-            <p className="mb-6 font-mono text-xs italic text-[#293b3d]/50">
+            <p className="mb-6 font-mono text-xs italic text-[#1a2838]/50">
               ↳ {WOCHENFRAGE.hint}
             </p>
           )}
 
           {answers.length > 0 && (
-            <p className="mb-8 font-mono text-[10px] uppercase tracking-widest text-[#a9322c]">
+            <p className="mb-8 font-mono text-[10px] uppercase tracking-widest text-[#ba3929]">
               {answers.length} {answers.length === 1 ? "person" : "people"} answered this week
             </p>
           )}
 
           {/* Answer form */}
           {sent ? (
-            <div className="bevel-box bg-[#b2a58d] p-6 font-mono text-sm text-[#1d2f31]">
-              <p className="font-bold text-[#a9322c]">Danke. ✓</p>
-              <p className="mt-2 text-[#293b3d]/60">
+            <div className="bevel-box bg-[#c4b498] p-6 font-mono text-sm text-[#1a2838]">
+              <p className="font-bold text-[#ba3929]">Danke. ✓</p>
+              <p className="mt-2 text-[#1a2838]/60">
                 Your answer is in. Come back next week.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bevel-box bg-[#b2a58d]">
-              <div className="flex items-center justify-between border-b-2 border-[#f6e7c4] bg-[#315d68] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
+            <form onSubmit={handleSubmit} className="bevel-box bg-[#c4b498]">
+              <div className="flex items-center justify-between border-b-2 border-[#f4efe1] bg-[#233d58] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
                 <span>deine_antwort.txt</span>
                 <span className="opacity-60">— □ ×</span>
               </div>
               <div className="space-y-4 p-5">
                 <div>
-                  <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/60">
+                  <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/60">
                     Your name (optional)
                   </label>
                   <input
@@ -100,11 +100,11 @@ export function WeeklyQuestionSection() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Anonymous"
-                    className="inset-field w-full bg-[#f5e7c6] px-3 py-2 font-mono text-sm text-[#1d2f31] placeholder-[#293b3d]/30"
+                    className="inset-field w-full bg-[#ede4c8] px-3 py-2 font-mono text-sm text-[#1a2838] placeholder-[#1a2838]/30"
                   />
                 </div>
                 <div>
-                  <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/60">
+                  <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/60">
                     Your answer *
                   </label>
                   <textarea
@@ -113,7 +113,7 @@ export function WeeklyQuestionSection() {
                     required
                     rows={4}
                     placeholder="Write what you think..."
-                    className="inset-field w-full resize-none bg-[#f5e7c6] px-3 py-2 font-mono text-sm text-[#1d2f31] placeholder-[#293b3d]/30"
+                    className="inset-field w-full resize-none bg-[#ede4c8] px-3 py-2 font-mono text-sm text-[#1a2838] placeholder-[#1a2838]/30"
                   />
                 </div>
                 <button
@@ -130,13 +130,13 @@ export function WeeklyQuestionSection() {
           {/* This week's answers */}
           {answers.length > 0 && (
             <div className="mt-10">
-              <p className="mb-4 font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/40">
+              <p className="mb-4 font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/40">
                 What others said:
               </p>
               <div className="space-y-3">
                 {answers.map((a, i) => (
-                  <div key={i} className="border-l-2 border-[#a9322c] bg-[#e8d4a8] px-4 py-3">
-                    <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#a9322c]">
+                  <div key={i} className="border-l-2 border-[#ba3929] bg-[#e4d5a4] px-4 py-3">
+                    <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#ba3929]">
                       {a.name}
                     </p>
                     <p className="mt-1 text-sm leading-relaxed">{a.answer}</p>

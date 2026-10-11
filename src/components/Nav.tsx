@@ -15,9 +15,9 @@ export function Nav() {
     : "······";
 
   return (
-    <header className="sticky top-0 z-10 border-b-2 border-[#293b3d] bg-[#b2a58d]">
+    <header className="sticky top-0 z-10 border-b-2 border-[#1a2838] bg-[#c4b498]">
       {/* Status bar */}
-      <div className="flex items-center justify-between border-b-2 border-[#f6e7c4] bg-[#315d68] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[#fff4d6] sm:px-5">
+      <div className="flex items-center justify-between border-b-2 border-[#f4efe1] bg-[#233d58] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[#fff4d6] sm:px-5">
         {/* <span>Bei Meixner · Est. 1996</span> */}
         <span className="hidden items-center gap-2 sm:flex">
           Visitors: <b className="hit-counter">{formatted}</b>
@@ -29,7 +29,7 @@ export function Nav() {
       </div>
 
       {/* Logo + nav */}
-      <div className="grid items-end gap-4 border-b-2 border-[#766b59] px-4 py-5 shadow-[inset_0_-2px_0_#f6e7c4] sm:px-6 lg:grid-cols-[1fr_auto] lg:py-6">
+      <div className="grid items-end gap-4 border-b-2 border-[#5a5040] px-4 py-5 shadow-[inset_0_-2px_0_#f4efe1] sm:px-6 lg:grid-cols-[1fr_auto] lg:py-6">
         <a className="logo leading-none" href="#top" aria-label="Michael Meixner home">
           BEI <span>MEIXNER</span>
         </a>

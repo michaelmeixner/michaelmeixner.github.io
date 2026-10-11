@@ -37,16 +37,16 @@ function SketchOverlay({ sketch, onClose }: { sketch: Sketch; onClose: () => voi
       onClick={onClose}
     >
       <div
-        className="my-auto flex flex-col border-2 border-[#f6e7c4] bg-[#b2a58d] shadow-[12px_12px_0_rgba(31,45,46,0.8)]"
+        className="my-auto flex flex-col border-2 border-[#f4efe1] bg-[#c4b498] shadow-[12px_12px_0_rgba(31,45,46,0.8)]"
         style={{ width: "min(900px, 90vw)", maxHeight: "100vh" }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Title bar */}
-        <div className="flex shrink-0 items-center justify-between border-b-2 border-[#f6e7c4] bg-[#315d68] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
+        <div className="flex shrink-0 items-center justify-between border-b-2 border-[#f4efe1] bg-[#233d58] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
           <span>{sketch.title}</span>
           <button
             onClick={onClose}
-            className="web-button px-2 py-0.5 font-mono text-xs font-bold leading-none hover:bg-[#a9322c]"
+            className="web-button px-2 py-0.5 font-mono text-xs font-bold leading-none hover:bg-[#ba3929]"
             aria-label="Close"
           >
             ×
@@ -57,7 +57,7 @@ function SketchOverlay({ sketch, onClose }: { sketch: Sketch; onClose: () => voi
           <sketch.Component />
         </div>
         {/* Caption */}
-        <div className="shrink-0 border-t-2 border-[#f6e7c4] px-4 py-2 font-mono text-[9px] uppercase tracking-widest text-[#1d2f31]/60">
+        <div className="shrink-0 border-t-2 border-[#f4efe1] px-4 py-2 font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/60">
           {sketch.note} · esc or click outside to close
         </div>
       </div>
@@ -70,7 +70,7 @@ export function SketchesSection() {
   const [open, setOpen] = useState<Sketch | null>(null);
 
   return (
-    <section id="eye" className="relative z-10 border-y-2 border-[#293b3d] bg-[#315d68] text-[#fff4d6]">
+    <section id="eye" className="relative z-10 border-y-2 border-[#1a2838] bg-[#233d58] text-[#fff4d6]">
       {/* Header */}
       <div className="flex items-end justify-between border-b-2 border-white/20 px-6 pb-4 pt-8 sm:px-10">
         <div>
@@ -99,9 +99,9 @@ export function SketchesSection() {
                 onClick={() => setOpen(sketch)}
                 aria-label={`Open ${sketch.title}`}
               >
-                <div className="border-2 border-[#f6e7c4] bg-[#b2a58d] shadow-[4px_4px_0_rgba(31,45,46,0.6)] transition-shadow hover:shadow-[6px_6px_0_rgba(31,45,46,0.8)]">
+                <div className="border-2 border-[#f4efe1] bg-[#c4b498] shadow-[4px_4px_0_rgba(31,45,46,0.6)] transition-shadow hover:shadow-[6px_6px_0_rgba(31,45,46,0.8)]">
                   {/* Title bar */}
-                  <div className="flex items-center justify-between border-b-2 border-[#f6e7c4] bg-[#315d68] px-3 py-1.5 font-mono text-[10px] font-bold uppercase text-[#fff4d6]">
+                  <div className="flex items-center justify-between border-b-2 border-[#f4efe1] bg-[#233d58] px-3 py-1.5 font-mono text-[10px] font-bold uppercase text-[#fff4d6]">
                     <span>{sketch.title}</span>
                     <span className="opacity-60">— □ ×</span>
                   </div>
@@ -115,7 +115,7 @@ export function SketchesSection() {
                     </div>
                   </div>
                   {/* Caption */}
-                  <div className="border-t-2 border-[#f6e7c4] px-3 py-1.5 font-mono text-[9px] uppercase tracking-widest text-[#1d2f31]/60">
+                  <div className="border-t-2 border-[#f4efe1] px-3 py-1.5 font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/60">
                     {sketch.note}
                   </div>
                 </div>

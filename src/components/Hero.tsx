@@ -16,11 +16,11 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative z-10 grid border-b-2 border-[#293b3d] bg-[#f5e7c6] lg:grid-cols-[1.1fr_0.9fr]"
+      className="relative z-10 grid border-b-2 border-[#1a2838] bg-[#ede4c8] lg:grid-cols-[1.1fr_0.9fr]"
     >
       {/* Left: welcome */}
-      <div className="flex min-h-[560px] flex-col justify-between p-6 sm:p-10 lg:min-h-[640px] lg:border-r-2 lg:border-[#293b3d] lg:p-12">
-        <div className="subhead flex items-center justify-between text-[10px] uppercase tracking-widest text-[#293b3d]/50">
+      <div className="flex min-h-[560px] flex-col justify-between p-6 sm:p-10 lg:min-h-[640px] lg:border-r-2 lg:border-[#1a2838] lg:p-12">
+        <div className="subhead flex items-center justify-between text-[10px] uppercase tracking-widest text-[#1a2838]/50">
           <span>
             Bei Meixner · An internet cafe built like they used to be.
           </span>
@@ -50,34 +50,34 @@ export function Hero() {
       </div>
 
       {/* Right: about.txt bevel window */}
-      <div className="relative bg-[#8eb3b6] p-6 sm:p-10 lg:p-12">
-        <div className="bevel-box bg-[#b2a58d] shadow-[8px_8px_0_#293b3d]">
-          <div className="flex items-center justify-between border-b-2 border-[#f6e7c4] bg-[#315d68] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
+      <div className="relative bg-[#6aaec8] p-6 sm:p-10 lg:p-12">
+        <div className="bevel-box bg-[#c4b498] shadow-[8px_8px_0_#1a2838]">
+          <div className="flex items-center justify-between border-b-2 border-[#f4efe1] bg-[#233d58] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
             <span>about.txt</span>
             <span className="opacity-60">— □ ×</span>
           </div>
-          <div className="p-5 font-mono text-sm text-[#1d2f31]">
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
+          <div className="p-5 font-mono text-sm text-[#1a2838]">
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#1a2838]/40">
               // who is this guy
             </p>
             <div className="space-y-1 leading-relaxed">
               <p>
-                <span className="text-[#a9322c]">name:</span>
+                <span className="text-[#ba3929]">name:</span>
                 &nbsp;&nbsp;&nbsp;&nbsp; Michael Meixner
               </p>
               <p>
-                <span className="text-[#a9322c]">lives:</span>
+                <span className="text-[#ba3929]">lives:</span>
                 &nbsp;&nbsp;&nbsp;&nbsp; Atlanta, Georgia, USA
               </p>
               <p>
-                <span className="text-[#a9322c]">makes:</span>&nbsp;&nbsp;&nbsp;
+                <span className="text-[#ba3929]">makes:</span>&nbsp;&nbsp;&nbsp;
                 Software, coffee, food, vibes
               </p>
             </div>
 
-            <div className="my-4 border-t border-[#293b3d]/20" />
+            <div className="my-4 border-t border-[#1a2838]/20" />
 
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#1a2838]/40">
               // currently into
             </p>
             <p className="leading-relaxed">
@@ -88,9 +88,9 @@ export function Hero() {
               Figuring out my own point of view.
             </p>
 
-            <div className="my-4 border-t border-[#293b3d]/20" />
+            <div className="my-4 border-t border-[#1a2838]/20" />
 
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/40">
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#1a2838]/40">
               // weekly question · woche #{WOCHENFRAGE.week}
             </p>
             {WOCHENFRAGE.question ? (
@@ -99,19 +99,19 @@ export function Hero() {
                   &ldquo;{WOCHENFRAGE.question}&rdquo;
                 </p>
                 {WOCHENFRAGE.hint && (
-                  <p className="mt-1 text-[10px] text-[#293b3d]/40">
+                  <p className="mt-1 text-[10px] text-[#1a2838]/40">
                     {WOCHENFRAGE.hint}
                   </p>
                 )}
                 {answerCount != null && answerCount > 0 && (
-                  <p className="mt-1 text-[10px] text-[#a9322c]">
+                  <p className="mt-1 text-[10px] text-[#ba3929]">
                     ↳ {answerCount} {answerCount === 1 ? "person" : "people"}{" "}
                     answered
                   </p>
                 )}
               </>
             ) : (
-              <p className="italic text-[10px] text-[#293b3d]/30">
+              <p className="italic text-[10px] text-[#1a2838]/30">
                 No question posted yet. Check back soon.
               </p>
             )}

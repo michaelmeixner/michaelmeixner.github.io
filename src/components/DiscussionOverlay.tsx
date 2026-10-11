@@ -58,12 +58,12 @@ export function DiscussionOverlay({ item, onClose }: { item: MediaItem; onClose:
       onClick={onClose}
     >
       <div
-        className="my-auto flex w-full flex-col border-2 border-[#f6e7c4] bg-[#b2a58d] shadow-[12px_12px_0_rgba(31,45,46,0.8)]"
+        className="my-auto flex w-full flex-col border-2 border-[#f4efe1] bg-[#c4b498] shadow-[12px_12px_0_rgba(31,45,46,0.8)]"
         style={{ maxWidth: "min(680px, 92vw)", maxHeight: "85vh" }}
         onClick={(e) => e.stopPropagation()}
       >
         <div
-          className="flex shrink-0 items-center justify-between border-b-2 border-[#f6e7c4] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]"
+          className="flex shrink-0 items-center justify-between border-b-2 border-[#f4efe1] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]"
           style={{ background: accentColor }}
         >
           <span>{item.title}</span>
@@ -71,7 +71,7 @@ export function DiscussionOverlay({ item, onClose }: { item: MediaItem; onClose:
         </div>
 
         <div className="min-h-0 flex-1 overflow-y-auto">
-          <div className="border-b-2 border-black/20 bg-[#f0dfba]">
+          <div className="border-b-2 border-black/20 bg-[#e8dfc8]">
             {item.image && (
               <div className="border-b-2 border-black/20">
                 <img src={item.image} alt={item.title} className="max-h-64 w-full object-cover" />
@@ -85,10 +85,10 @@ export function DiscussionOverlay({ item, onClose }: { item: MediaItem; onClose:
                 {item.category}
               </span>
               <h3 className="section-title text-[clamp(1.6rem,4vw,2.4rem)] leading-tight">{item.title}</h3>
-              <p className="mt-1 font-mono text-xs text-[#293b3d]/60">
+              <p className="mt-1 font-mono text-xs text-[#1a2838]/60">
                 {item.creator}{item.year ? ` · ${item.year}` : ""}
               </p>
-              <p className="mt-4 max-w-lg leading-relaxed text-[#1d2f31]">{item.note}</p>
+              <p className="mt-4 max-w-lg leading-relaxed text-[#1a2838]">{item.note}</p>
               {item.link && (
                 <a
                   href={item.link}
@@ -103,7 +103,7 @@ export function DiscussionOverlay({ item, onClose }: { item: MediaItem; onClose:
           </div>
 
           <div className="p-5">
-            <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-[#293b3d]/50">Discussion</p>
+            <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-[#1a2838]/50">Discussion</p>
             <form onSubmit={handleSubmit} className="mb-5">
               <div className="flex gap-2">
                 <input value={name} onChange={(e) => setName(e.target.value)} maxLength={30} placeholder="your name (optional)" className="inset-field w-32 shrink-0 bg-white px-3 py-2 font-mono text-xs outline-none placeholder:text-black/40" />
@@ -130,7 +130,7 @@ export function DiscussionOverlay({ item, onClose }: { item: MediaItem; onClose:
           </div>
         </div>
 
-        <div className="shrink-0 border-t-2 border-[#f6e7c4] px-4 py-2 font-mono text-[9px] uppercase tracking-widest text-[#1d2f31]/50">
+        <div className="shrink-0 border-t-2 border-[#f4efe1] px-4 py-2 font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/50">
           esc or click outside to close
         </div>
       </div>

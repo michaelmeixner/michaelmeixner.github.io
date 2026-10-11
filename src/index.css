@@ -24,7 +24,7 @@
 
 :root {
   font-family: "Futura Now Text", Futura, "Century Gothic", sans-serif;
-  color: #1d2f31;
+  color: #1a2838;
   font-synthesis: none;
 
   /* EyeCard */
@@ -41,10 +41,10 @@ body {
   margin: 0;
   min-width: 320px;
   font-family: "Futura Now Text", Futura, "Century Gothic", sans-serif;
-  background-color: #315d68;
+  background-color: #1a2838;
   background-image:
-    radial-gradient(#f6e7c4 0.7px, transparent 0.8px),
-    radial-gradient(#8eb3b6 0.7px, transparent 0.8px);
+    radial-gradient(#f4efe1 0.7px, transparent 0.8px),
+    radial-gradient(#6aaec8 0.7px, transparent 0.8px);
   background-position: 0 0, 13px 13px;
   background-size: 26px 26px;
 }
@@ -52,7 +52,7 @@ body {
 button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
-::selection { color: #fff4d6; background: #a9322c; }
+::selection { color: #fff4d6; background: #ba3929; }
 
 .noise {
   position: fixed;
@@ -66,14 +66,14 @@ a { color: inherit; text-decoration: none; }
 .site-shell {
   width: min(1180px, calc(100% - 24px));
   margin: 12px auto;
-  border: 2px solid #f6e7c4;
-  box-shadow: 0 0 0 2px #293b3d, 10px 10px 0 rgba(31, 45, 46, 0.55);
+  border: 2px solid #f4efe1;
+  box-shadow: 0 0 0 2px #1a2838, 10px 10px 0 rgba(31, 45, 46, 0.55);
 }
 
 .hit-counter {
   padding: 1px 4px;
-  color: #f3bf58;
-  background: #263c3f;
+  color: #bdadc9;
+  background: #1a2838;
   border: 1px inset #d7c7a8;
   font-family: "Courier New", monospace;
   letter-spacing: 0.18em;
@@ -89,19 +89,19 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo span {
-  color: #a9322c;
-  text-shadow: 0.04em 0.04em 0 #e1b45b;
+  color: #ba3929;
+  text-shadow: 0.04em 0.04em 0 #8a6014;
 }
 
 nav a { border-bottom: 1px solid transparent; transition: color 0.15s; }
-nav a:hover { color: #a9322c; border-color: currentColor; }
+nav a:hover { color: #ba3929; border-color: currentColor; }
 
 .online-dot {
   display: inline-block;
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #c8463d;
+  background: #ba3929;
   box-shadow: 0 0 0 2px rgba(200, 70, 61, 0.2);
   animation: blink-dot 1.5s steps(2) infinite;
 }
@@ -115,7 +115,7 @@ nav a:hover { color: #a9322c; border-color: currentColor; }
 }
 
 .hero-title em {
-  color: #a9322c;
+  color: #ba3929;
   font-style: normal;
 }
 
@@ -132,12 +132,12 @@ nav a:hover { color: #a9322c; border-color: currentColor; }
 }
 
 .classic-link {
-  color: #9f302b;
+  color: #ba3929;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.image-frame { box-shadow: 6px 6px 0 #293b3d; }
+.image-frame { box-shadow: 6px 6px 0 #1a2838; }
 .image-frame img {
   filter: sepia(0.16) saturate(1.15) contrast(1.05);
   transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 700ms ease;
@@ -154,7 +154,7 @@ nav a:hover { color: #a9322c; border-color: currentColor; }
 }
 
 article h3 a {
-  background-image: linear-gradient(#e1b45b, #e1b45b);
+  background-image: linear-gradient(#dfb447, #dfb447);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 0 14%;
@@ -163,15 +163,15 @@ article h3 a {
 article:hover h3 a { background-size: 100% 14%; }
 
 .web-button {
-  color: #1d2f31;
-  background: #b2a58d;
+  color: #1a2838;
+  background: #c4b498;
   border-width: 2px;
   border-style: solid;
-  border-color: #f6e7c4 #4b4a40 #4b4a40 #f6e7c4;
-  box-shadow: 1px 1px 0 #293b3d;
+  border-color: #f4efe1 #4b4a40 #4b4a40 #f4efe1;
+  box-shadow: 1px 1px 0 #1a2838;
 }
 .web-button:active {
-  border-color: #4b4a40 #f6e7c4 #f6e7c4 #4b4a40;
+  border-color: #4b4a40 #f4efe1 #f4efe1 #4b4a40;
   box-shadow: none;
   transform: translate(1px, 1px);
 }
@@ -179,13 +179,13 @@ article:hover h3 a { background-size: 100% 14%; }
 .inset-field {
   border-width: 2px;
   border-style: solid;
-  border-color: #4b4a40 #f6e7c4 #f6e7c4 #4b4a40;
+  border-color: #4b4a40 #f4efe1 #f4efe1 #4b4a40;
 }
 
 .bevel-box {
   border-width: 2px;
   border-style: solid;
-  border-color: #f6e7c4 #4b4a40 #4b4a40 #f6e7c4;
+  border-color: #f4efe1 #4b4a40 #4b4a40 #f4efe1;
 }
 
 .blink-text { animation: old-blink 1s steps(2, jump-none) infinite; }

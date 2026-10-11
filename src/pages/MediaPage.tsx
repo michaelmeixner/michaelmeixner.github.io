@@ -32,65 +32,65 @@ function SuggestForm() {
 
   if (sent) {
     return (
-      <div className="bevel-box bg-[#b2a58d] p-6 font-mono text-sm text-[#1d2f31]">
-        <p className="font-bold text-[#2D6B3F]">Thanks.</p>
-        <p className="mt-1 text-[#293b3d]/60">Your suggestion is in; I'll review it soon.</p>
+      <div className="bevel-box bg-[#c4b498] p-6 font-mono text-sm text-[#1a2838]">
+        <p className="font-bold text-[#3e6943]">Thanks.</p>
+        <p className="mt-1 text-[#1a2838]/60">Your suggestion is in; I'll review it soon.</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bevel-box bg-[#b2a58d]">
-      <div className="flex items-center justify-between border-b-2 border-[#f6e7c4] bg-[#315d68] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
+    <form onSubmit={handleSubmit} className="bevel-box bg-[#c4b498]">
+      <div className="flex items-center justify-between border-b-2 border-[#f4efe1] bg-[#233d58] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
         <span>vorschlag.txt</span>
         <span className="opacity-60">— □ ×</span>
       </div>
       <div className="space-y-3 p-5">
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
-            <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/60">Category *</label>
+            <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/60">Category *</label>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value as Category)}
-              className="inset-field w-full bg-[#f5e7c6] px-3 py-2 font-mono text-sm text-[#1d2f31]"
+              className="inset-field w-full bg-[#ede4c8] px-3 py-2 font-mono text-sm text-[#1a2838]"
             >
               {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
           </div>
           <div>
-            <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/60">Year</label>
+            <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/60">Year</label>
             <input
               value={year}
               onChange={(e) => setYear(e.target.value)}
               maxLength={4}
               placeholder="e.g. 2024"
-              className="inset-field w-full bg-[#f5e7c6] px-3 py-2 font-mono text-sm text-[#1d2f31] placeholder-[#293b3d]/30"
+              className="inset-field w-full bg-[#ede4c8] px-3 py-2 font-mono text-sm text-[#1a2838] placeholder-[#1a2838]/30"
             />
           </div>
         </div>
         <div>
-          <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/60">Title *</label>
+          <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/60">Title *</label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             maxLength={100}
             required
             placeholder="Title"
-            className="inset-field w-full bg-[#f5e7c6] px-3 py-2 font-mono text-sm text-[#1d2f31] placeholder-[#293b3d]/30"
+            className="inset-field w-full bg-[#ede4c8] px-3 py-2 font-mono text-sm text-[#1a2838] placeholder-[#1a2838]/30"
           />
         </div>
         <div>
-          <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/60">Creator / Director / Artist</label>
+          <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/60">Creator / Director / Artist</label>
           <input
             value={creator}
             onChange={(e) => setCreator(e.target.value)}
             maxLength={100}
             placeholder="Optional"
-            className="inset-field w-full bg-[#f5e7c6] px-3 py-2 font-mono text-sm text-[#1d2f31] placeholder-[#293b3d]/30"
+            className="inset-field w-full bg-[#ede4c8] px-3 py-2 font-mono text-sm text-[#1a2838] placeholder-[#1a2838]/30"
           />
         </div>
         <div>
-          <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/60">Why should it be on the shelf? *</label>
+          <label className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/60">Why should it be on the shelf? *</label>
           <textarea
             value={note}
             onChange={(e) => setNote(e.target.value)}
@@ -98,7 +98,7 @@ function SuggestForm() {
             required
             rows={3}
             placeholder="Say something about it..."
-            className="inset-field w-full resize-none bg-[#f5e7c6] px-3 py-2 font-mono text-sm text-[#1d2f31] placeholder-[#293b3d]/30"
+            className="inset-field w-full resize-none bg-[#ede4c8] px-3 py-2 font-mono text-sm text-[#1a2838] placeholder-[#1a2838]/30"
           />
         </div>
         <button
@@ -120,9 +120,9 @@ export function MediaPage({ onBack }: { onBack: () => void }) {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
-    <div className="site-shell min-h-screen bg-[#b2a58d] text-[#1d2f31]">
+    <div className="site-shell min-h-screen bg-[#c4b498] text-[#1a2838]">
       {/* Page header */}
-      <div className="relative z-10 border-b-2 border-[#293b3d] bg-[#f0dfba] px-4 py-8 sm:px-8">
+      <div className="relative z-10 border-b-2 border-[#1a2838] bg-[#e8dfc8] px-4 py-8 sm:px-8">
         <button
           onClick={onBack}
           className="classic-link mb-6 inline-block font-mono text-[10px] uppercase tracking-widest"
@@ -130,13 +130,13 @@ export function MediaPage({ onBack }: { onBack: () => void }) {
           ← Back to Bei Meixner
         </button>
         <h1 className="section-title text-[clamp(2rem,5vw,3.5rem)]">On the Shelf</h1>
-        <p className="mt-3 max-w-lg text-sm leading-relaxed text-[#293b3d]/60">
+        <p className="mt-3 max-w-lg text-sm leading-relaxed text-[#1a2838]/60">
           What I'm into right now. Click any item to read more and start or continue a discussion about it.
         </p>
       </div>
 
       {/* Card grid */}
-      <div className="relative z-10 bg-[#f0dfba] px-4 pb-16 sm:px-8">
+      <div className="relative z-10 bg-[#e8dfc8] px-4 pb-16 sm:px-8">
         <div className="grid border-x-2 border-t-2 border-black sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, index) => {
             const accentColor = CATEGORY_COLORS[item.category];
@@ -163,14 +163,14 @@ export function MediaPage({ onBack }: { onBack: () => void }) {
                     <span className="px-2 py-0.5 uppercase text-white" style={{ background: accentColor }}>
                       {item.category}
                     </span>
-                    <span className="text-[#293b3d]/40">↗</span>
+                    <span className="text-[#1a2838]/40">↗</span>
                   </div>
                   <h3 className="section-title text-[clamp(1.4rem,3vw,2rem)] leading-tight">{item.title}</h3>
-                  <p className="mt-1 font-mono text-[10px] text-[#293b3d]/50">
+                  <p className="mt-1 font-mono text-[10px] text-[#1a2838]/50">
                     {item.creator}{item.year ? ` · ${item.year}` : ""}
                   </p>
                 </div>
-                <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#293b3d]/70">{item.note}</p>
+                <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#1a2838]/70">{item.note}</p>
               </button>
             );
           })}
@@ -178,9 +178,9 @@ export function MediaPage({ onBack }: { onBack: () => void }) {
       </div>
 
       {/* Suggest form */}
-      <div className="relative z-10 border-t-2 border-[#293b3d] bg-[#315d68] px-4 py-16 sm:px-8">
+      <div className="relative z-10 border-t-2 border-[#1a2838] bg-[#233d58] px-4 py-16 sm:px-8">
         <div className="mb-8">
-          <p className="mb-2 font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#e8c46b]">
+          <p className="mb-2 font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#dfb447]">
             Suggest something
           </p>
           <h2 className="section-title text-[clamp(1.6rem,4vw,2.8rem)] text-[#fff4d6]">

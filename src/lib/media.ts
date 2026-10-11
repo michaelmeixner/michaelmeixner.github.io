@@ -12,11 +12,11 @@ export interface MediaItem {
 }
 
 export const CATEGORY_COLORS: Record<Category, string> = {
-  Film: "#a9322c",
-  Music: "#315d68",
-  Magazine: "#C1ACCB",
-  Recipe: "#2D6B3F",
-  Other: "#766b59",
+  Film: "#ba3929",
+  Music: "#233d58",
+  Magazine: "#bdadc9",
+  Recipe: "#3e6943",
+  Other: "#5a5040",
 };
 
 export const MEDIA: MediaItem[] = [

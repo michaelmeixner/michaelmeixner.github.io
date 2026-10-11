@@ -16,7 +16,7 @@ function CdCaseCover({ item, onClick }: { item: MediaItem; onClick: () => void }
         className="relative w-full overflow-hidden transition-transform duration-150 group-hover:-translate-y-2"
         style={{
           height: 207,
-          boxShadow: "5px 7px 0 #1d2f31",
+          boxShadow: "5px 7px 0 #1a2838",
         }}
       >
         {/* Grey plastic spine — outer edge of the case past the hinge */}
@@ -73,22 +73,22 @@ function CdCaseCover({ item, onClick }: { item: MediaItem; onClick: () => void }
       </div>
       {item.image ? (
         <div className="mt-2 w-full">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/40">{item.category}</p>
           <p
             className="mt-0.5 line-clamp-2 text-[13px] font-bold uppercase leading-tight tracking-wide"
-            style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1d2f31" }}
+            style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1a2838" }}
           >
             {item.title}
           </p>
           {item.creator && (
-            <p className="mt-0.5 font-mono text-[10px] text-[#293b3d]/50">{item.creator}</p>
+            <p className="mt-0.5 font-mono text-[10px] text-[#1a2838]/50">{item.creator}</p>
           )}
           {item.year && (
-            <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.year}</p>
+            <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/40">{item.year}</p>
           )}
         </div>
       ) : (
-        <p className="mt-2 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
+        <p className="mt-2 font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/40">{item.category}</p>
       )}
     </button>
   );
@@ -109,7 +109,7 @@ function NotecardCover({ item, onClick }: { item: MediaItem; onClick: () => void
         style={{
           height: 155,
           borderRadius: 3,
-          background: "#2D6B3F",
+          background: "#3e6943",
           boxShadow: "5px 7px 0 #1a3d28",
         }}
       >
@@ -147,18 +147,18 @@ function NotecardCover({ item, onClick }: { item: MediaItem; onClick: () => void
         </div>
       </div>
       <div className="mt-2 w-full">
-        <p className="font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
+        <p className="font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/40">{item.category}</p>
         <p
           className="mt-0.5 line-clamp-2 text-[13px] font-bold uppercase leading-tight tracking-wide"
-          style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1d2f31" }}
+          style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1a2838" }}
         >
           {item.title}
         </p>
         {item.creator && (
-          <p className="mt-0.5 font-mono text-[10px] text-[#293b3d]/50">{item.creator}</p>
+          <p className="mt-0.5 font-mono text-[10px] text-[#1a2838]/50">{item.creator}</p>
         )}
         {item.year && (
-          <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.year}</p>
+          <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/40">{item.year}</p>
         )}
       </div>
     </button>
@@ -184,7 +184,7 @@ function MediaCover({ item, onClick }: { item: MediaItem; onClick: () => void })
         style={{
           height: 273,
           borderRadius: item.category === "Film" ? 5 : 0,
-          boxShadow: "5px 7px 0 #1d2f31",
+          boxShadow: "5px 7px 0 #1a2838",
         }}
       >
         {/* Spine */}
@@ -235,22 +235,22 @@ function MediaCover({ item, onClick }: { item: MediaItem; onClick: () => void })
       {/* Label below — only when the cover face shows an image */}
       {item.image ? (
         <div className="mt-2 w-full">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/40">{item.category}</p>
           <p
             className="mt-0.5 line-clamp-2 text-[13px] font-bold uppercase leading-tight tracking-wide"
-            style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1d2f31" }}
+            style={{ fontFamily: '"Walbaum Book Pro", "Bodoni 72", Didot, serif', color: "#1a2838" }}
           >
             {item.title}
           </p>
           {item.creator && (
-            <p className="mt-0.5 font-mono text-[10px] text-[#293b3d]/50">{item.creator}</p>
+            <p className="mt-0.5 font-mono text-[10px] text-[#1a2838]/50">{item.creator}</p>
           )}
           {item.year && (
-            <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.year}</p>
+            <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/40">{item.year}</p>
           )}
         </div>
       ) : (
-        <p className="mt-2 font-mono text-[9px] uppercase tracking-widest text-[#293b3d]/40">{item.category}</p>
+        <p className="mt-2 font-mono text-[9px] uppercase tracking-widest text-[#1a2838]/40">{item.category}</p>
       )}
     </button>
   );
@@ -263,18 +263,18 @@ export function MediaSection({ onNavigate }: { onNavigate: () => void }) {
   return (
     <section
       id="media"
-      className="relative z-10 border-y-2 border-[#293b3d] bg-[#f0dfba] px-4 py-16 sm:px-8 lg:py-20"
+      className="relative z-10 border-y-2 border-[#1a2838] bg-[#e8dfc8] px-4 py-16 sm:px-8 lg:py-20"
     >
       {/* Header */}
       <div className="mb-10 flex items-end justify-between border-b-2 border-black pb-3">
         <div>
           <h2 className="section-title">On the Shelf</h2>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/30">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/30">
             Was ich gerade liebe
           </span>
         </div>
         {MEDIA.length > 5 && (
-          <span className="font-mono text-[10px] uppercase tracking-widest text-[#293b3d]/40">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-[#1a2838]/40">
             +{MEDIA.length - 5} more
           </span>
         )}

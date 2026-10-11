@@ -41,19 +41,13 @@ export default function App() {
     <>
       <div className="noise" aria-hidden="true" />
 
-      <div className="site-shell overflow-x-hidden bg-[#b2a58d] text-[#1d2f31]">
+      <div className="site-shell overflow-x-hidden bg-[#c4b498] text-[#1a2838]">
         <Nav />
-
-        <div className="relative z-[11] bg-[#d6a344] px-2 py-1 text-center font-mono text-[10px] font-bold uppercase text-[#37291e] shadow-[0_4px_0_#6f2b27]">
-          <span className="blink-text">
-            &lt;WILLKOMMEN!&gt; You found the place
-          </span>
-        </div>
 
         <Hero />
 
         {/* Ticker */}
-        <div className="marquee relative z-10 border-b-2 border-[#293b3d] bg-[#2D6B3F] py-2 text-[#C1ACCB]">
+        <div className="marquee relative z-10 border-b-2 border-[#1a2838] bg-[#3e6943] py-2 text-[#bdadc9]">
           <div className="marquee-track font-mono text-xs font-bold uppercase tracking-[0.2em]">
             {MARQUEE_TEXT}
             {MARQUEE_TEXT}
@@ -61,7 +55,7 @@ export default function App() {
         </div>
 
         {/* Under-construction bar */}
-        <aside className="relative z-10 grid border-b-2 border-[#293b3d] bg-[#b2a58d] font-mono text-[10px] font-bold uppercase md:grid-cols-3">
+        <aside className="relative z-10 grid border-b-2 border-[#1a2838] bg-[#c4b498] font-mono text-[10px] font-bold uppercase md:grid-cols-3">
           <div className="bevel-box p-3 text-center">
             <span className="blink-text text-red-600">[!]</span> This page is
             permanently under construction

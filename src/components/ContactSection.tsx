@@ -89,13 +89,13 @@ export function ContactSection() {
       {/* Gästebuch */}
       <section
         id="gaestebuch"
-        className="relative z-10 grid border-y-2 border-[#293b3d] bg-[#315d68] text-[#fff4d6] lg:grid-cols-[0.9fr_1.1fr]"
+        className="relative z-10 grid border-y-2 border-[#1a2838] bg-[#233d58] text-[#fff4d6] lg:grid-cols-[0.9fr_1.1fr]"
       >
         {/* Left: description */}
         <div className="p-6 sm:p-10 lg:border-r lg:border-white/20 lg:p-16">
-          <p className="subhead mb-8 text-sm font-medium uppercase tracking-[0.25em] text-[#e8c46b]">
+          <p className="subhead mb-8 text-sm font-medium uppercase tracking-[0.25em] text-[#dfb447]">
             Guestbook{" "}
-            <span className="text-[#e8c46b]/40">Gästebuch</span>
+            <span className="text-[#dfb447]/40">Gästebuch</span>
           </p>
           <h2 className="section-title max-w-md">Leave something for the next person.</h2>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-white/80">
@@ -108,9 +108,9 @@ export function ContactSection() {
 
         {/* Right: guestbook window */}
         <div className="p-4 sm:p-8 lg:p-12">
-          <div className="border-2 border-[#f6e7c4] bg-[#b2a58d] text-[#1d2f31] shadow-[8px_8px_0_rgba(31,45,46,0.6)]">
+          <div className="border-2 border-[#f4efe1] bg-[#c4b498] text-[#1a2838] shadow-[8px_8px_0_rgba(31,45,46,0.6)]">
             {/* Window chrome */}
-            <div className="flex items-center justify-between border-b-2 border-[#f6e7c4] bg-[#315d68] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
+            <div className="flex items-center justify-between border-b-2 border-[#f4efe1] bg-[#233d58] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
               <span>gaestebuch.html</span>
               <span className="opacity-60">— □ ×</span>
             </div>
@@ -157,7 +157,7 @@ export function ContactSection() {
                   className="grid grid-cols-[1fr_auto] gap-2 border-b border-black/20 p-4 last:border-0"
                 >
                   <p className="text-sm leading-relaxed">
-                    <span className="font-mono text-xs font-bold text-[#9f302b]">{entry.name}</span>
+                    <span className="font-mono text-xs font-bold text-[#ba3929]">{entry.name}</span>
                     <span className="font-mono mx-2 text-xs">:</span>
                     {entry.message}
                   </p>
@@ -174,7 +174,7 @@ export function ContactSection() {
       {/* Newsletter / footer */}
       <footer
         id="newsletter"
-        className="relative z-10 border-t-2 border-[#293b3d] bg-[#8eb3b6] px-4 py-16 sm:px-8 lg:px-10 lg:py-24"
+        className="relative z-10 border-t-2 border-[#1a2838] bg-[#6aaec8] px-4 py-16 sm:px-8 lg:px-10 lg:py-24"
       >
         <div className="mx-auto max-w-4xl text-center">
           <p className="subhead mb-6 text-sm font-medium uppercase tracking-[0.3em]">
@@ -183,7 +183,7 @@ export function ContactSection() {
           <h2 className="hero-title text-[clamp(2.6rem,7vw,6rem)]">
             Don't be a stranger.
           </h2>
-          <p className="subhead mt-2 text-xs uppercase tracking-widest text-[#1d2f31]/35">
+          <p className="subhead mt-2 text-xs uppercase tracking-widest text-[#1a2838]/35">
             Nicht fremd bleiben.
           </p>
           <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed">
@@ -191,7 +191,7 @@ export function ContactSection() {
           </p>
 
           {subscribed ? (
-            <div className="mx-auto mt-10 inline-block border-2 border-[#293b3d] bg-[#e1b45b] px-6 py-4 font-mono text-sm font-bold uppercase shadow-[5px_5px_0_#293b3d]">
+            <div className="mx-auto mt-10 inline-block border-2 border-[#1a2838] bg-[#dfb447] px-6 py-4 font-mono text-sm font-bold uppercase shadow-[5px_5px_0_#1a2838]">
               You're in. Talk soon.
             </div>
           ) : (
@@ -220,12 +220,12 @@ export function ContactSection() {
             </form>
           )}
           {subError && (
-            <p className="mt-3 font-mono text-xs text-[#a9322c]">Something went wrong. Try again.</p>
+            <p className="mt-3 font-mono text-xs text-[#ba3929]">Something went wrong. Try again.</p>
           )}
         </div>
 
         {/* Colophon */}
-        <div className="mx-auto mt-20 max-w-2xl border-t-2 border-black/20 pt-10 text-center font-mono text-[10px] leading-relaxed text-[#1d2f31]/50">
+        <div className="mx-auto mt-20 max-w-2xl border-t-2 border-black/20 pt-10 text-center font-mono text-[10px] leading-relaxed text-[#1a2838]/50">
           <p className="subhead mb-2 font-bold uppercase tracking-widest">Colophon</p>
           <p>
             Built by hand in Atlanta, Georgia. Set in{" "}
