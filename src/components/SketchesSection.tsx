@@ -79,9 +79,14 @@ export function SketchesSection() {
             Fun things I've made
           </span>
         </div>
-        <p className="hidden font-mono text-[10px] uppercase tracking-widest text-white/40 sm:block">
-          click to open · scroll →
-        </p>
+        <div className="text-right">
+          <p className="hidden font-mono text-[10px] uppercase tracking-widest text-white/40 sm:block">
+            click to open · scroll →
+          </p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-white/25">
+            may not function correctly on mobile
+          </p>
+        </div>
       </div>
 
       {/* Scrollable card row */}

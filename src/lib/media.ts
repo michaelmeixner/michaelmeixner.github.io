@@ -80,5 +80,14 @@ export const MEDIA: MediaItem[] = [
     image: "/media/ada.png",
     link: "https://arabicdesignarchive.com",
   },
+  {
+    id: "media-8",
+    category: "Other",
+    title: "Cinelli Bicycles",
+    creator: "Cino Cinelli",
+    note: "Very cool bike brand with great history and design. Link takes you to a blog post about the history of the Cinelli logo and its designer, Italo Lupi.",
+    image: "/media/cinelli.jpeg",
+    link: "https://cinelli-milano.com/blogs/news/cinelli-winged-c-logo-italo-lupi-history?srsltid=AU7gw4VSE2Y7bEwMFMHXrL6Xbf8v-yIMNO2z70RnPRpL6B3hNgXhKTGA",
+  },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
