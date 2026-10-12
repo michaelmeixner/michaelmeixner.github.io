@@ -90,7 +90,7 @@ a { color: inherit; text-decoration: none; }
 
 .logo span {
   color: #ba3929;
-  text-shadow: 0.04em 0.04em 0 #8a6014;
+  text-shadow: 0.03em 0.03em 0 #8a6014;
 }
 
 nav a { border-bottom: 1px solid transparent; transition: color 0.15s; }

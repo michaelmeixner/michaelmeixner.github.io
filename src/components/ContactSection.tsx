@@ -107,7 +107,7 @@ export function ContactSection() {
         </div>
 
         {/* Right: guestbook window */}
-        <div className="p-4 sm:p-8 lg:p-12">
+        <div className="p-4 pb-6 pr-6 sm:p-8 sm:pb-10 sm:pr-10 lg:p-12 lg:pb-14 lg:pr-14">
           <div className="border-2 border-[#f4efe1] bg-[#c4b498] text-[#1a2838] shadow-[8px_8px_0_rgba(31,45,46,0.6)]">
             {/* Window chrome */}
             <div className="flex items-center justify-between border-b-2 border-[#f4efe1] bg-[#233d58] px-4 py-2 font-mono text-xs font-bold uppercase text-[#fff4d6]">
@@ -117,7 +117,7 @@ export function ContactSection() {
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="border-b-2 border-black p-3 space-y-2">
-              <div className="flex gap-2">
+              <div className="flex flex-col gap-2 sm:flex-row">
                 <label className="sr-only" htmlFor="gb-name">Your name</label>
                 <input
                   id="gb-name"
@@ -125,7 +125,7 @@ export function ContactSection() {
                   onChange={(e) => setName(e.target.value)}
                   maxLength={30}
                   placeholder="your name (optional)"
-                  className="inset-field w-32 shrink-0 bg-white px-3 py-2 font-mono text-xs outline-none placeholder:text-black/40"
+                  className="inset-field w-full bg-white px-3 py-2 font-mono text-xs outline-none placeholder:text-black/40 sm:w-32 sm:shrink-0"
                 />
                 <label className="sr-only" htmlFor="gb-message">Message</label>
                 <input
@@ -135,11 +135,11 @@ export function ContactSection() {
                   maxLength={120}
                   required
                   placeholder="write something..."
-                  className="inset-field min-w-0 flex-1 bg-white px-3 py-2 font-mono text-xs outline-none placeholder:text-black/40"
+                  className="inset-field w-full bg-white px-3 py-2 font-mono text-xs outline-none placeholder:text-black/40 sm:min-w-0 sm:flex-1"
                 />
                 <button
                   type="submit"
-                  className="web-button shrink-0 px-4 font-mono text-xs font-bold uppercase"
+                  className="web-button w-full px-4 py-2 font-mono text-xs font-bold uppercase sm:w-auto sm:shrink-0"
                 >
                   Post
                 </button>
